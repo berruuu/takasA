@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Takasla - Üniversiteler Arası Güvenli Takas Platformu</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "surface-container-highest": "#2d3449",
+          "on-secondary": "#552100",
+          "on-secondary-fixed-variant": "#783200",
+          "secondary-container": "#ec6a06",
+          "inverse-primary": "#006b5f",
+          "border-subtle": "#334155",
+          "on-primary-container": "#00423b",
+          "secondary": "#ffb690",
+          "surface-card": "#1e293b",
+          "on-primary-fixed-variant": "#005048",
+          "outline-variant": "#3c4947",
+          "surface": "#0b1326",
+          "tertiary-fixed-dim": "#3cddc7",
+          "border-highlight": "#475569",
+          "tertiary-fixed": "#62fae3",
+          "on-surface": "#dae2fd",
+          "surface-card-elevated": "#1f2937",
+          "surface-tint": "#4fdbc8",
+          "surface-dim": "#0b1326",
+          "on-secondary-fixed": "#341100",
+          "on-error-container": "#ffdad6",
+          "on-primary": "#003731",
+          "on-secondary-container": "#4a1c00",
+          "surface-container-low": "#131b2e",
+          "primary-fixed-dim": "#4fdbc8",
+          "inverse-on-surface": "#283044",
+          "error-container": "#93000a",
+          "surface-variant": "#2d3449",
+          "on-tertiary-fixed": "#00201c",
+          "surface-canvas": "#0f172a",
+          "outline": "#859490",
+          "secondary-fixed": "#ffdbca",
+          "have-container": "#0c2826",
+          "tertiary": "#3cddc7",
+          "surface-container": "#171f33",
+          "accent-orange-bright": "#fb923c",
+          "on-tertiary-fixed-variant": "#005047",
+          "background": "#0b1326",
+          "want-container": "#2a1b14",
+          "surface-container-high": "#222a3d",
+          "error": "#ffb4ab",
+          "surface-container-lowest": "#060e20",
+          "surface-bright": "#31394d",
+          "primary-fixed": "#71f8e4",
+          "on-error": "#690005",
+          "text-muted": "#94a3b8",
+          "text-primary": "#f8fafc",
+          "on-primary-fixed": "#00201c",
+          "primary-container": "#14b8a6",
+          "on-tertiary-container": "#00423a",
+          "text-secondary": "#e2e8f0",
+          "tertiary-container": "#00b8a5",
+          "secondary-fixed-dim": "#ffb690",
+          "on-surface-variant": "#bbcac6",
+          "on-background": "#dae2fd",
+          "surface-base": "#090d16",
+          "on-tertiary": "#003731",
+          "inverse-surface": "#dae2fd",
+          "primary": "#4fdbc8"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "space-sm": "0.5rem",
+          "gutter": "1.5rem",
+          "space-xs": "0.25rem",
+          "margin-mobile": "1rem",
+          "gutter-mobile": "1rem",
+          "space-md": "1rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2.5rem",
+          "margin": "2rem"
+        },
+        "fontFamily": {
+          "label-sm": ["Plus Jakarta Sans"],
+          "body-lg": ["Plus Jakarta Sans"],
+          "headline-lg": ["Plus Jakarta Sans"],
+          "label-md": ["Plus Jakarta Sans"],
+          "headline-lg-mobile": ["Plus Jakarta Sans"],
+          "body-sm": ["Plus Jakarta Sans"],
+          "display-hero": ["Plus Jakarta Sans"],
+          "label-lg": ["Plus Jakarta Sans"],
+          "headline-sm": ["Plus Jakarta Sans"],
+          "headline-md": ["Plus Jakarta Sans"],
+          "title-md": ["Plus Jakarta Sans"],
+          "display-hero-mobile": ["Plus Jakarta Sans"],
+          "title-lg": ["Plus Jakarta Sans"],
+          "body-md": ["Plus Jakarta Sans"]
+        },
+        "fontSize": {
+          "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700"}],
+          "body-lg": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+          "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+          "headline-lg-mobile": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+          "body-sm": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+          "display-hero": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800"}],
+          "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+          "headline-sm": ["20px", {"lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600"}],
+          "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+          "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}],
+          "display-hero-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+          "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}],
+          "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+        }
+      },
+    },
+  }
+</script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 4px;
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 9999px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+</style>
+</head>
+<body class="bg-[#0b1326] text-[#dae2fd] antialiased font-body-md text-body-md selection:bg-primary selection:text-[#003731] min-h-screen flex flex-col">
+<!-- ================= TOP NAV BAR (Dark Header) ================= -->
+<header class="bg-[#0e172e]/95 backdrop-blur-md border-b border-slate-800 shadow-lg docked full-width top-0 sticky z-40">
+<div class="flex justify-between items-center w-full px-margin md:px-margin max-w-7xl mx-auto h-20 gap-space-md">
+<!-- Brand & Global Search -->
+<div class="flex items-center gap-space-lg flex-1">
+<a class="flex items-center gap-space-xs text-headline-md font-headline-md font-extrabold text-[#4fdbc8] tracking-tight" href="#">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-br from-[#14b8a6] to-[#006b5f] flex items-center justify-center text-white shadow-md shadow-teal-900/30">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">swap_horizontal_circle</span>
+</div>
+<span class="text-white">Takas<span class="text-[#4fdbc8]">la</span></span>
+</a>
+<!-- Campus Selector Pill Dropdown -->
+<div class="relative hidden lg:block">
+<button class="flex items-center gap-space-xs bg-[#131b2e] hover:bg-[#1a243b] transition-colors py-2 px-3.5 rounded-full border border-slate-700/70 text-[#e2e8f0]" id="campusMenuBtn">
+<span class="material-symbols-outlined text-[#4fdbc8] text-[18px]">location_on</span>
+<span class="font-label-md text-label-md text-[#e2e8f0] font-semibold" id="currentCampusLabel">İTÜ Ayazağa Kampüsü</span>
+<span class="material-symbols-outlined text-[18px] text-[#94a3b8]">expand_more</span>
+</button>
+</div>
+<!-- Integrated Search Bar -->
+<div class="relative max-w-md w-full hidden md:block">
+<div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[#859490] text-[20px]">search</span>
+</div>
+<input class="w-full pl-10 pr-4 py-2.5 bg-[#131b2e] border border-slate-700/80 rounded-lg text-body-md font-body-md text-[#f8fafc] placeholder:text-[#859490] focus:outline-none focus:ring-2 focus:ring-[#4fdbc8] focus:border-transparent transition-all" placeholder="Ürün, kitap, ekipman ara..." type="text"/>
+</div>
+</div>
+<!-- Trailing Action Cluster -->
+<div class="flex items-center gap-space-sm md:gap-space-md">
+<!-- Dark / Light Mode Toggle -->
+<button class="relative p-2.5 rounded-lg text-[#94a3b8] hover:text-[#4fdbc8] hover:bg-[#131b2e] border border-slate-800 transition-colors" id="themeToggleBtn" title="Tema Değiştir (Aydınlık / Karanlık)">
+<span class="material-symbols-outlined text-[20px] block" id="themeIcon">light_mode</span>
+</button>
+<!-- Campus Select Mobile Trigger -->
+<button class="lg:hidden p-2 rounded-lg text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#131b2e] transition-colors" title="Kampüs Seç">
+<span class="material-symbols-outlined">location_on</span>
+</button>
+<!-- Notification Action -->
+<button class="relative p-2.5 rounded-full text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#131b2e] transition-colors" title="Bildirimler">
+<span class="material-symbols-outlined text-[22px]">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-[#fb923c] animate-pulse"></span>
+</button>
+<!-- Chat Bubble Action -->
+<button class="relative p-2.5 rounded-full text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#131b2e] transition-colors hidden sm:flex" title="Mesajlar">
+<span class="material-symbols-outlined text-[22px]">chat_bubble</span>
+<span class="absolute top-1.5 right-1.5 px-1 bg-[#4fdbc8] text-[#003731] text-[10px] font-bold rounded-full min-w-[16px] text-center">3</span>
+</button>
+<!-- Primary CTA: İlan Ver -->
+<button class="flex items-center gap-space-xs bg-[#14b8a6] hover:bg-[#4fdbc8] text-[#003731] px-4 py-2.5 rounded-lg font-label-lg text-label-lg font-bold shadow-md shadow-teal-900/40 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+<span class="hidden sm:inline">İlan Ver</span>
+</button>
+<!-- Student Profile Tile -->
+<div class="flex items-center gap-2 pl-2 border-l border-slate-800">
+<div class="relative cursor-pointer">
+<img alt="Öğrenci Profil Fotoğrafı" class="w-10 h-10 rounded-full object-cover ring-2 ring-[#4fdbc8]/40" data-alt="Close up portrait photograph of a confident Turkish university student smiling warmly in campus library setting with high key bright natural daylight and sharp focus" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsd_L2Mb-LIYEe6veI62f7SQsYBHwGmjnDjcNjwcf6EXnl2JVrN8-KP9NQtij3dsO4n5Koq7WuIVk3vOZUblHnA4mRzFvvdPf7tUWkNWgOCnjZg5aYWfTjR8l7jMh3nrcP3IU4-xgo1xLn7VIDILaL5c1vDL6sRJkl_NlGulJ12uEu-gS6fzAJ8hfFIOzhiFykqRfDozH_ig-IVYJSrMYf5bAr5viNbH0eoYJ9ZwU"/>
+<div class="absolute -bottom-0.5 -right-0.5 bg-[#4fdbc8] rounded-full p-0.5 text-[#003731] ring-1 ring-[#0b1326]" title="Doğrulanmış İTÜ Öğrencisi">
+<span class="material-symbols-outlined text-[13px] block" style="font-variation-settings: 'FILL' 1;">verified</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Category Navigation Bar -->
+<div class="bg-[#0b1326]/90 border-t border-slate-800/80">
+<div class="max-w-7xl mx-auto px-margin overflow-x-auto custom-scrollbar">
+<nav class="flex items-center gap-space-lg h-12 whitespace-nowrap">
+<a class="text-[#4fdbc8] font-bold border-b-2 border-[#4fdbc8] pb-1 font-label-lg text-label-lg flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]">auto_stories</span>
+<span>Ders Notları/Kitap</span>
+</a>
+<a class="text-[#94a3b8] font-medium hover:text-[#4fdbc8] transition-colors font-label-lg text-label-lg flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]">devices</span>
+<span>Elektronik</span>
+</a>
+<a class="text-[#94a3b8] font-medium hover:text-[#4fdbc8] transition-colors font-label-lg text-label-lg flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]">apparel</span>
+<span>Giyim</span>
+</a>
+<a class="text-[#94a3b8] font-medium hover:text-[#4fdbc8] transition-colors font-label-lg text-label-lg flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]">sports_esports</span>
+<span>Müzik/Hobi</span>
+</a>
+<a class="text-[#94a3b8] font-medium hover:text-[#4fdbc8] transition-colors font-label-lg text-label-lg flex items-center gap-1.5" href="#">
+<span class="material-symbols-outlined text-[18px]">bed</span>
+<span>Yurt/Ev Eşyası</span>
+</a>
+</nav>
+</div>
+</div>
+</header>
+<!-- ================= MAIN CONTENT CANVAS ================= -->
+<main class="flex-1 max-w-7xl w-full mx-auto px-margin-mobile md:px-margin py-space-lg flex flex-col gap-space-xl">
+<!-- HERO / CAMPUS SWAP SPOTLIGHT BANNER -->
+<section class="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#0c2e2c] via-[#09352e] to-[#0d2238] border border-teal-500/20 text-[#dae2fd] p-space-lg md:p-space-xl shadow-xl shadow-teal-950/40">
+<div class="relative z-10 max-w-3xl flex flex-col gap-space-md">
+<!-- Live Tag Badge -->
+<div class="inline-flex items-center gap-space-xs bg-[#4fdbc8]/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-label-sm font-label-sm w-fit text-[#62fae3] border border-[#4fdbc8]/30">
+<span class="w-2 h-2 rounded-full bg-[#3cddc7] animate-pulse"></span>
+<span>İTÜ &amp; ODTÜ &amp; Boğaziçi Kampüslerinde Aktif Takaslar</span>
+</div>
+<h1 class="font-display-hero text-display-hero md:text-display-hero font-extrabold tracking-tight leading-tight text-white">
+          Paraya İhtiyaç Yok, <br class="hidden sm:inline"/>Kampüste Takasla!
+        </h1>
+<p class="font-body-lg text-body-lg text-[#cbd5e1] max-w-2xl">
+          Kullanmadığın ders kitabını grafik tablete, eski kulaklığını gitara dönüştür. Doğrulanmış .edu.tr öğrenci ağı ile güvenli ve sıfır bütçeli takas deneyimi.
+        </p>
+<!-- 3-Step Process Micro Flow -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-sm">
+<div class="flex items-center gap-2.5 bg-[#0b1326]/60 rounded-xl p-3 backdrop-blur-md border border-teal-400/20 shadow-sm">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-[#fb923c] text-[#552100] font-bold text-label-sm shrink-0">1</span>
+<span class="text-body-sm font-body-sm font-medium text-[#f8fafc]">İlanını Aç</span>
+</div>
+<div class="flex items-center gap-2.5 bg-[#0b1326]/60 rounded-xl p-3 backdrop-blur-md border border-teal-400/20 shadow-sm">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-[#fb923c] text-[#552100] font-bold text-label-sm shrink-0">2</span>
+<span class="text-body-sm font-body-sm font-medium text-[#f8fafc]">Karşılık İsteğini Belirt</span>
+</div>
+<div class="flex items-center gap-2.5 bg-[#0b1326]/60 rounded-xl p-3 backdrop-blur-md border border-teal-400/20 shadow-sm">
+<span class="flex items-center justify-center w-6 h-6 rounded-full bg-[#fb923c] text-[#552100] font-bold text-label-sm shrink-0">3</span>
+<span class="text-body-sm font-body-sm font-medium text-[#f8fafc]">Kampüste Güvenle Buluş</span>
+</div>
+</div>
+<!-- Quick Filter Tags -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<span class="text-label-sm font-label-sm text-[#94a3b8] mr-1">Hızlı Filtrele:</span>
+<button class="bg-[#131b2e]/90 hover:bg-[#1a243b] text-[#e2e8f0] hover:text-[#4fdbc8] border border-slate-700/60 transition-colors px-3 py-1 rounded-full text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#fb923c]">bolt</span> Acil Takas
+          </button>
+<button class="bg-[#131b2e]/90 hover:bg-[#1a243b] text-[#e2e8f0] hover:text-[#4fdbc8] border border-slate-700/60 transition-colors px-3 py-1 rounded-full text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#4fdbc8]">book</span> Ders Kitapları
+          </button>
+<button class="bg-[#131b2e]/90 hover:bg-[#1a243b] text-[#e2e8f0] hover:text-[#4fdbc8] border border-slate-700/60 transition-colors px-3 py-1 rounded-full text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#4fdbc8]">headphones</span> Kulaklık/Elektronik
+          </button>
+<button class="bg-[#131b2e]/90 hover:bg-[#1a243b] text-[#e2e8f0] hover:text-[#4fdbc8] border border-slate-700/60 transition-colors px-3 py-1 rounded-full text-label-sm font-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-[#fb923c]">trending_up</span> Popüler
+          </button>
+</div>
+</div>
+<!-- Ambient Decorative Glowing Orbs -->
+<div class="absolute -right-12 -bottom-16 w-80 h-80 rounded-full bg-[#14b8a6]/20 blur-3xl pointer-events-none"></div>
+<div class="absolute right-32 top-6 w-48 h-48 rounded-full bg-[#ec6a06]/15 blur-2xl pointer-events-none"></div>
+</section>
+<!-- FILTER & SORT TOOLBAR -->
+<section class="bg-[#131b2e] rounded-xl p-space-md border border-slate-800 shadow-md flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<!-- Left: Active Filter Pills -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-label-md text-label-md text-[#94a3b8] font-semibold uppercase mr-2 tracking-wide">Filtreler:</span>
+<button class="bg-[#14b8a6] text-[#003731] font-bold px-3.5 py-1.5 rounded-full font-label-sm text-label-sm flex items-center gap-1 shadow-sm">
+<span>Tüm Kampüsler</span>
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<button class="bg-[#1a243b] hover:bg-[#222e49] text-[#cbd5e1] hover:text-[#f8fafc] border border-slate-700/70 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span>Birebir Takas</span>
+</button>
+<button class="bg-[#1a243b] hover:bg-[#222e49] text-[#cbd5e1] hover:text-[#f8fafc] border border-slate-700/70 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span>Sıfır Ayarında</span>
+</button>
+<button class="bg-[#1a243b] hover:bg-[#222e49] text-[#cbd5e1] hover:text-[#f8fafc] border border-slate-700/70 px-3.5 py-1.5 rounded-full font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px] text-[#4fdbc8]">verified_user</span>
+<span>Sadece Onaylı Öğrenciler</span>
+</button>
+</div>
+<!-- Right: Sort Selector & View Count -->
+<div class="flex items-center justify-between md:justify-end gap-space-md pt-2 md:pt-0 border-t md:border-t-0 border-slate-800">
+<span class="text-body-sm font-body-sm text-[#94a3b8]">
+<strong class="text-[#f8fafc] font-semibold">142</strong> aktif takas ilanı
+        </span>
+<div class="flex items-center gap-2">
+<label class="text-label-sm font-label-sm text-[#94a3b8] font-medium" for="sortSelector">Sırala:</label>
+<select class="bg-[#1a243b] border border-slate-700 rounded-lg text-body-sm font-body-sm text-[#f8fafc] py-1.5 px-3 focus:ring-1 focus:ring-[#4fdbc8] focus:border-[#4fdbc8] focus:outline-none" id="sortSelector">
+<option>En Yeni İlanlar</option>
+<option>En Çok İlgi Görenler</option>
+<option>Yakın Kampüsler Önce</option>
+</select>
+</div>
+</div>
+</section>
+<!-- ================= BARTER LISTINGS GRID (Dark Rich Cards) ================= -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+<!-- CARD 1: iPad 9. Nesil -->
+<div class="bg-[#131b2e] rounded-xl border border-slate-800 shadow-md hover:border-slate-700 hover:shadow-xl transition-all flex flex-col overflow-hidden group">
+<!-- OFFERING (VERİLEN) SECTION -->
+<div class="p-space-md flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="bg-[#0c2826] text-[#4fdbc8] border border-[#14b8a6]/40 text-[11px] font-bold tracking-wider px-2.5 py-0.5 rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_circle_up</span> VERİLEN
+            </span>
+<span class="text-body-sm font-body-sm bg-[#1a243b] text-[#94a3b8] border border-slate-700/50 px-2 py-0.5 rounded font-medium">
+              Sıfır Ayarında
+            </span>
+</div>
+<div class="relative overflow-hidden rounded-lg h-44 bg-[#0b1326]">
+<img alt="iPad 9. Nesil + Apple Pencil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" data-alt="A clean top view flat lay photograph of a Space Gray iPad tablet with an Apple pencil placed neatly beside engineering sketch paper on a warm wooden college desk with soft daylight illuminating the modern tech gear" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ9nIY7B3a42MqUaHZpqrv-hLHXlM4AbwhlYeEH70D--kQaWt9hNWVv9Pm_kF-euud57jxClUK3pmG1brZDfTnHSHoufBMQvQT32VUevW2wz8MmORyoq0ajGG4ME54JlSjDiHmM2sFd28FILXpx55Z9fHsaedwEG7Q4H1X9CEJ6P9nCpauAvn42AwHbdWXJB6mQrlXhBdjLTI9AKg4NQxqZ600Xi3dWqXvuhV1V5k"/>
+<div class="absolute top-2 left-2 bg-[#0b1326]/85 text-[#dae2fd] border border-slate-700 px-2 py-0.5 rounded text-label-sm font-label-sm backdrop-blur-sm">
+              Elektronik
+            </div>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-[#f8fafc] font-bold group-hover:text-[#4fdbc8] transition-colors">
+              iPad 9. Nesil + Apple Pencil
+            </h3>
+<p class="font-body-sm text-body-sm text-[#94a3b8] line-clamp-1 mt-0.5">
+              64GB Uzay Grisi, çiziksiz ekran, kılıf ve kutusu ile eksiksiz teslim.
+            </p>
+</div>
+</div>
+<!-- PLAYFUL SWAP DIVIDER -->
+<div class="relative flex items-center justify-center px-space-md">
+<div class="w-full border-t border-slate-800"></div>
+<div class="absolute bg-[#131b2e] px-2 text-[#4fdbc8] font-bold text-label-sm flex items-center gap-1 border border-slate-800 rounded-full">
+<span class="material-symbols-outlined text-[#fb923c] text-[20px]">swap_vertical_circle</span>
+</div>
+</div>
+<!-- WANT (ARANAN) SECTION -->
+<div class="p-space-md bg-[#2a1b14]/70 border-t border-b border-[#fb923c]/20 flex flex-col gap-1.5 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="bg-[#ec6a06]/20 text-[#fb923c] border border-[#ec6a06]/40 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">ARANAN</span>
+<span class="text-[#fb923c] font-semibold text-label-sm">Karşılığında Tercih:</span>
+</div>
+<p class="font-title-md text-title-md text-[#ffdbca] font-bold">
+            Mekanik Klavye + 27 inç Monitör veya Dengi Elektronik
+          </p>
+<span class="text-body-sm font-body-sm text-[#e2e8f0]/80">Mimari render için geniş ekran ve red switch klavye takası arıyorum.</span>
+</div>
+<!-- FOOTER & STUDENT DETAILS -->
+<div class="p-space-md bg-[#131b2e] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Selin Y." class="w-8 h-8 rounded-full object-cover ring-1 ring-[#4fdbc8]" data-alt="Portrait photograph of a young female architecture student with glasses smiling outdoors in university courtyard with blurred green trees in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDv_b0-XCPQHYFZRdR6rJKRkQcv21TjuBFDOxJTG5RuVNLY1I9JjHtGdSqbepUPdBWi9rb_QYzV1-YScGp00KpuFPMFQBJa93NgDHEZe8DJJu387z5YRS1-2Gwo7oVw7nLdp7iPHJcbZyQ55yN66CRRFbfceAkC96LLUTke8uJFe_-GRuxK0J6DB4CZO3nrIiQxBF3pClnd9qD5lBLPUF-rJYBvhzgT2WZVLZjIW08"/>
+<div>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-[#f8fafc]">Selin Y.</span>
+<span class="text-body-sm font-body-sm text-[#94a3b8]">(Mimarlık 3)</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[14px] text-[#4fdbc8]">location_on</span>
+<span>İTÜ Ayazağa</span>
+</div>
+</div>
+</div>
+<!-- Karma Score Badge -->
+<div class="flex items-center gap-1 bg-[#1a243b] px-2 py-1 rounded text-label-sm font-label-sm font-bold text-[#4fdbc8] border border-slate-700/60">
+<span class="material-symbols-outlined text-[15px] text-[#fb923c]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+<span class="text-[#94a3b8] text-[10px] font-normal">(18 Takas)</span>
+</div>
+</div>
+<!-- Direct Contact Trigger Buttons -->
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="flex items-center justify-center gap-1 bg-[#1a243b] hover:bg-[#222e49] text-[#e2e8f0] border border-slate-700 py-2 rounded-lg font-label-md text-label-md transition-all active:scale-95" onclick="openContactModal('Selin Y.', 'selin.arch', 'selin@student.itu.edu.tr', 'iPad 9. Nesil + Apple Pencil', 'İTÜ Ayazağa Kampüsü (Kütüphane veya Mimarlık Fakültesi Girişi)')">
+<span class="material-symbols-outlined text-[16px] text-[#fb923c]">alternate_email</span>
+<span>@selin.arch</span>
+</button>
+<button class="flex items-center justify-center gap-1 bg-[#14b8a6] hover:bg-[#4fdbc8] text-[#003731] py-2 rounded-lg font-label-md text-label-md font-bold transition-all active:scale-95 shadow-sm shadow-teal-950/50" onclick="openContactModal('Selin Y.', 'selin.arch', 'selin@student.itu.edu.tr', 'iPad 9. Nesil + Apple Pencil', 'İTÜ Ayazağa Kampüsü')">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>İletişime Geç</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CARD 2: Calculus 1-2 & Fizik 101 Orijinal Kitap Seti -->
+<div class="bg-[#131b2e] rounded-xl border border-slate-800 shadow-md hover:border-slate-700 hover:shadow-xl transition-all flex flex-col overflow-hidden group">
+<!-- OFFERING -->
+<div class="p-space-md flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="bg-[#0c2826] text-[#4fdbc8] border border-[#14b8a6]/40 text-[11px] font-bold tracking-wider px-2.5 py-0.5 rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_circle_up</span> VERİLEN
+            </span>
+<span class="text-body-sm font-body-sm bg-[#1a243b] text-[#94a3b8] border border-slate-700/50 px-2 py-0.5 rounded font-medium">
+              Temiz &amp; Notlu
+            </span>
+</div>
+<div class="relative overflow-hidden rounded-lg h-44 bg-[#0b1326]">
+<img alt="Calculus &amp; Physics Book Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" data-alt="Editorial clean photograph of hardcover Thomas Calculus and Serway Physics textbooks stacked neatly on a bright white minimalist study desk next to highlighters and notebook with bright natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaFDS81u9hfjmUu5lHYqRhOWyqrxfec9TXM0M8B_o43q2-ECGVbqxSHFHJcLSCrUeqk7tlXSZVjWMr2GlYrmRYflel5Zg4IS0MK9LJqFzwg42rf5UHmwZLBNnyi-S_2OPOufB-GlAdUEx99Tmu1Vo_5C_e7MBNM2mjpGT1nY47JMY-gPDoV0n7ikJ755ArDxx8PVtroP9pDXfTzYK7btnWmfcAepykPvVt7tf4TfY"/>
+<div class="absolute top-2 left-2 bg-[#0b1326]/85 text-[#dae2fd] border border-slate-700 px-2 py-0.5 rounded text-label-sm font-label-sm backdrop-blur-sm">
+              Ders Notları/Kitap
+            </div>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-[#f8fafc] font-bold group-hover:text-[#4fdbc8] transition-colors">
+              Calculus 1-2 &amp; Fizik 101 Seti
+            </h3>
+<p class="font-body-sm text-body-sm text-[#94a3b8] line-clamp-1 mt-0.5">
+              Thomas Calculus 14th Ed. + Serway Physics. Vize notları arasına iliştirilmiş.
+            </p>
+</div>
+</div>
+<div class="relative flex items-center justify-center px-space-md">
+<div class="w-full border-t border-slate-800"></div>
+<div class="absolute bg-[#131b2e] px-2 text-[#4fdbc8] font-bold text-label-sm flex items-center gap-1 border border-slate-800 rounded-full">
+<span class="material-symbols-outlined text-[#fb923c] text-[20px]">swap_vertical_circle</span>
+</div>
+</div>
+<!-- WANT -->
+<div class="p-space-md bg-[#2a1b14]/70 border-t border-b border-[#fb923c]/20 flex flex-col gap-1.5 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="bg-[#ec6a06]/20 text-[#fb923c] border border-[#ec6a06]/40 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">ARANAN</span>
+<span class="text-[#fb923c] font-semibold text-label-sm">Karşılığında Tercih:</span>
+</div>
+<p class="font-title-md text-title-md text-[#ffdbca] font-bold">
+            Python / Yapay Zeka Kitapları veya Grafik Tablet
+          </p>
+<span class="text-body-sm font-body-sm text-[#e2e8f0]/80">Wacom One ya da derin öğrenme kaynak kitapları ile birebir takas yapılır.</span>
+</div>
+<!-- FOOTER -->
+<div class="p-space-md bg-[#131b2e] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Mert K." class="w-8 h-8 rounded-full object-cover ring-1 ring-[#4fdbc8]" data-alt="Portrait photograph of a Turkish male software engineering student smiling with casual hoodie inside computer lab with softly blurred background monitor screens" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADxXOOoTDRptHCWjcxSxL8vCP9R4gUYekF1JWtnENiK-_yU3iuv65cgzKB35JWp6y4JsMplqj8mK3kRGQc1ip9uxApeOCTl815RiwyJ1Uwbiku4WjY5EkaNlMZzRheE95X77JqNE9fllfTb9toYGOMaIqrVYrjsilSaFW8Aam8n-teVdwib8EKh-9kokkOC6ScbuepenoAyrlKYYsvKdpMYr4bKcDccaPR34cNHEA"/>
+<div>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-[#f8fafc]">Mert K.</span>
+<span class="text-body-sm font-body-sm text-[#94a3b8]">(Bilgisayar Müh.)</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[14px] text-[#4fdbc8]">location_on</span>
+<span>ODTÜ Merkez</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-[#1a243b] px-2 py-1 rounded text-label-sm font-label-sm font-bold text-[#4fdbc8] border border-slate-700/60">
+<span class="material-symbols-outlined text-[15px] text-[#fb923c]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+<span class="text-[#94a3b8] text-[10px] font-normal">(24 Takas)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="flex items-center justify-center gap-1 bg-[#1a243b] hover:bg-[#222e49] text-[#e2e8f0] border border-slate-700 py-2 rounded-lg font-label-md text-label-md transition-all active:scale-95" onclick="openContactModal('Mert K.', 'mert.code', 'mert@ceng.metu.edu.tr', 'Calculus 1-2 &amp; Fizik 101 Seti', 'ODTÜ Kütüphane Binası Önü')">
+<span class="material-symbols-outlined text-[16px] text-[#fb923c]">alternate_email</span>
+<span>@mert.code</span>
+</button>
+<button class="flex items-center justify-center gap-1 bg-[#14b8a6] hover:bg-[#4fdbc8] text-[#003731] py-2 rounded-lg font-label-md text-label-md font-bold transition-all active:scale-95 shadow-sm shadow-teal-950/50" onclick="openContactModal('Mert K.', 'mert.code', 'mert@ceng.metu.edu.tr', 'Calculus 1-2 &amp; Fizik 101 Seti', 'ODTÜ Merkez Kampüs')">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>İletişime Geç</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CARD 3: Sony WH-1000XM4 Kulaklık -->
+<div class="bg-[#131b2e] rounded-xl border border-slate-800 shadow-md hover:border-slate-700 hover:shadow-xl transition-all flex flex-col overflow-hidden group">
+<!-- OFFERING -->
+<div class="p-space-md flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="bg-[#0c2826] text-[#4fdbc8] border border-[#14b8a6]/40 text-[11px] font-bold tracking-wider px-2.5 py-0.5 rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_circle_up</span> VERİLEN
+            </span>
+<span class="text-body-sm font-body-sm bg-[#1a243b] text-[#94a3b8] border border-slate-700/50 px-2 py-0.5 rounded font-medium">
+              Kutulu &amp; Faturalı
+            </span>
+</div>
+<div class="relative overflow-hidden rounded-lg h-44 bg-[#0b1326]">
+<img alt="Sony WH-1000XM4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" data-alt="Commercial style studio photograph of black Sony WH-1000XM4 wireless over-ear noise cancelling headphones positioned next to carrying case on light clean surface with soft teal reflection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW1Qb41JOg7FN5o8GkNO1n23RWpMdCsq2tbA6ByOeH_nHKb846pDPA662laBExRwtzmYw48dAbX8TfEx7x9fvcC2tY9Wlv8TEtBL_apy2xtQAXweTcari4rNiFwSgcU7MoXURhJqf8Z7hqUJ2b9XmKNXWVmcvdr6DB7vZixXG4wstMk7MMRR5qrTNFZ7m4iPuw2kwfLkB8RbJMb4qC1mAdrwzJ52H5R26-oHtbm4I"/>
+<div class="absolute top-2 left-2 bg-[#0b1326]/85 text-[#dae2fd] border border-slate-700 px-2 py-0.5 rounded text-label-sm font-label-sm backdrop-blur-sm">
+              Elektronik
+            </div>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-[#f8fafc] font-bold group-hover:text-[#4fdbc8] transition-colors">
+              Sony WH-1000XM4 Kulak Üstü
+            </h3>
+<p class="font-body-sm text-body-sm text-[#94a3b8] line-clamp-1 mt-0.5">
+              Aktif Gürültü Engelleme, tertemiz pedler, 30 saat pil ömrü ve orijinal kutu.
+            </p>
+</div>
+</div>
+<div class="relative flex items-center justify-center px-space-md">
+<div class="w-full border-t border-slate-800"></div>
+<div class="absolute bg-[#131b2e] px-2 text-[#4fdbc8] font-bold text-label-sm flex items-center gap-1 border border-slate-800 rounded-full">
+<span class="material-symbols-outlined text-[#fb923c] text-[20px]">swap_vertical_circle</span>
+</div>
+</div>
+<!-- WANT -->
+<div class="p-space-md bg-[#2a1b14]/70 border-t border-b border-[#fb923c]/20 flex flex-col gap-1.5 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="bg-[#ec6a06]/20 text-[#fb923c] border border-[#ec6a06]/40 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">ARANAN</span>
+<span class="text-[#fb923c] font-semibold text-label-sm">Karşılığında Tercih:</span>
+</div>
+<p class="font-title-md text-title-md text-[#ffdbca] font-bold">
+            Klasik/Akustik Gitar veya Switch Oyunları
+          </p>
+<span class="text-body-sm font-body-sm text-[#e2e8f0]/80">Yamaha C40 gitar veya Zelda BOTW + Mario Kart oyun kartuşları.</span>
+</div>
+<!-- FOOTER -->
+<div class="p-space-md bg-[#131b2e] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Ece D." class="w-8 h-8 rounded-full object-cover ring-1 ring-[#4fdbc8]" data-alt="Close portrait photo of a cheerful female business student smiling outdoors at Bosphorus university campus with historic stone buildings in soft focused background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFgdDxlBpp9fuSUmOCR-s7ItLJUupFXzgcDp4CBOc33nQtEtCzJl5sWqbP-V7JP9QQ2_xctNwj4DtkBa3pFZwcmIEoCP6TIE3TPEht8TX_coILWsRiql2FmVpYDgsyejiIsEPzBTPUE_nV048pX5E851Q2IUHIY6rV8dY-3yyHT6Dv6nBsbVx2o0dFKg0KHDD24RAcOgGl5MG44ykRGW3jSsHcQY6yHC-PGfEqO3k"/>
+<div>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-[#f8fafc]">Ece D.</span>
+<span class="text-body-sm font-body-sm text-[#94a3b8]">(İşletme 2)</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[14px] text-[#4fdbc8]">location_on</span>
+<span>Boğaziçi Güney</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-[#1a243b] px-2 py-1 rounded text-label-sm font-label-sm font-bold text-[#4fdbc8] border border-slate-700/60">
+<span class="material-symbols-outlined text-[15px] text-[#fb923c]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.8</span>
+<span class="text-[#94a3b8] text-[10px] font-normal">(11 Takas)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="flex items-center justify-center gap-1 bg-[#1a243b] hover:bg-[#222e49] text-[#e2e8f0] border border-slate-700 py-2 rounded-lg font-label-md text-label-md transition-all active:scale-95" onclick="openContactModal('Ece D.', 'ecedemir.boun', 'ece.demir@boun.edu.tr', 'Sony WH-1000XM4 Kulaklık', 'Boğaziçi Güney Kampüs Meydanı')">
+<span class="material-symbols-outlined text-[16px] text-[#fb923c]">alternate_email</span>
+<span>@ecedemir.boun</span>
+</button>
+<button class="flex items-center justify-center gap-1 bg-[#14b8a6] hover:bg-[#4fdbc8] text-[#003731] py-2 rounded-lg font-label-md text-label-md font-bold transition-all active:scale-95 shadow-sm shadow-teal-950/50" onclick="openContactModal('Ece D.', 'ecedemir.boun', 'ece.demir@boun.edu.tr', 'Sony WH-1000XM4 Kulaklık', 'Boğaziçi Güney Kampüs')">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>İletişime Geç</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CARD 4: North Face Sırt Çantası & Kamp Matı -->
+<div class="bg-[#131b2e] rounded-xl border border-slate-800 shadow-md hover:border-slate-700 hover:shadow-xl transition-all flex flex-col overflow-hidden group">
+<!-- OFFERING -->
+<div class="p-space-md flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="bg-[#0c2826] text-[#4fdbc8] border border-[#14b8a6]/40 text-[11px] font-bold tracking-wider px-2.5 py-0.5 rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_circle_up</span> VERİLEN
+            </span>
+<span class="text-body-sm font-body-sm bg-[#1a243b] text-[#94a3b8] border border-slate-700/50 px-2 py-0.5 rounded font-medium">
+              Az Kullanılmış
+            </span>
+</div>
+<div class="relative overflow-hidden rounded-lg h-44 bg-[#0b1326]">
+<img alt="North Face Sırt Çantası" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" data-alt="High quality product photo of a black outdoor North Face backpack resting beside a rolled compact camping sleeping mat on clean light concrete flooring in bright daylight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvEANw3MV5UMv_QvbY72JeaMXdStkSaPMNLWW5vu8h6Nw6dHscDYa7WdAHFYMlGMTVyBWr2He5-enu7BYeYJB0r6bEpCwZRNu_-nD8SEk_ReWjlrhulloE6FFGb3Ay7IaOLy5KOWbKY5-Y0Cpbvy762ZSV1c0-bXqB-tNJ1AXBgjQpBq9GNR7mnfnFoFAaba8JZKlV43iQ1CBJfm5FkANCr4iSYwUAakWpZL8XWA0"/>
+<div class="absolute top-2 left-2 bg-[#0b1326]/85 text-[#dae2fd] border border-slate-700 px-2 py-0.5 rounded text-label-sm font-label-sm backdrop-blur-sm">
+              Giyim
+            </div>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-[#f8fafc] font-bold group-hover:text-[#4fdbc8] transition-colors">
+              The North Face 30L &amp; Mat
+            </h3>
+<p class="font-body-sm text-body-sm text-[#94a3b8] line-clamp-1 mt-0.5">
+              Su geçirmez kumaş, ergonomik bel desteği, yırtıksız tertemiz durumda.
+            </p>
+</div>
+</div>
+<div class="relative flex items-center justify-center px-space-md">
+<div class="w-full border-t border-slate-800"></div>
+<div class="absolute bg-[#131b2e] px-2 text-[#4fdbc8] font-bold text-label-sm flex items-center gap-1 border border-slate-800 rounded-full">
+<span class="material-symbols-outlined text-[#fb923c] text-[20px]">swap_vertical_circle</span>
+</div>
+</div>
+<!-- WANT -->
+<div class="p-space-md bg-[#2a1b14]/70 border-t border-b border-[#fb923c]/20 flex flex-col gap-1.5 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="bg-[#ec6a06]/20 text-[#fb923c] border border-[#ec6a06]/40 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">ARANAN</span>
+<span class="text-[#fb923c] font-semibold text-label-sm">Karşılığında Tercih:</span>
+</div>
+<p class="font-title-md text-title-md text-[#ffdbca] font-bold">
+            Kaykay veya Analog Fotoğraf Makinesi
+          </p>
+<span class="text-body-sm font-body-sm text-[#e2e8f0]/80">Cruiser kaykay veya 35mm çalışan analog makine ile takas düşünülebilir.</span>
+</div>
+<!-- FOOTER -->
+<div class="p-space-md bg-[#131b2e] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Barış A." class="w-8 h-8 rounded-full object-cover ring-1 ring-[#4fdbc8]" data-alt="Portrait photography of a friendly male industrial engineering student smiling with campus building in background wearing casual jacket" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK_UO59fXRd32BaBC_sEE3zvqMmBgJcJkLcV_Hls877UXhXIMMM9TZo-6GT5uUXS2x_CPEwChVhvdsHTgYUF9LN1tD9bcLq32mz25FEamNCOKBiX5hI3DDe0ne3Hn5TgSKOSkEwcC8POF5ZYbh028dgoQiCIDfPaMxlWdO6qmnU8i0TLEaEsrBcpZ28AKj3wH47Qo0Gg5nVoZlb7eDbvGv_KYgRrzyI2xUjNU3F1c"/>
+<div>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-[#f8fafc]">Barış A.</span>
+<span class="text-body-sm font-body-sm text-[#94a3b8]">(Endüstri Müh.)</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[14px] text-[#4fdbc8]">location_on</span>
+<span>YTÜ Davutpaşa</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-[#1a243b] px-2 py-1 rounded text-label-sm font-label-sm font-bold text-[#4fdbc8] border border-slate-700/60">
+<span class="material-symbols-outlined text-[15px] text-[#fb923c]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.7</span>
+<span class="text-[#94a3b8] text-[10px] font-normal">(9 Takas)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="flex items-center justify-center gap-1 bg-[#1a243b] hover:bg-[#222e49] text-[#e2e8f0] border border-slate-700 py-2 rounded-lg font-label-md text-label-md transition-all active:scale-95" onclick="openContactModal('Barış A.', 'baris.outdoor', 'baris@std.yildiz.edu.tr', 'North Face Çanta &amp; Mat', 'YTÜ Davutpaşa Orta Bahçe')">
+<span class="material-symbols-outlined text-[16px] text-[#fb923c]">alternate_email</span>
+<span>@baris.outdoor</span>
+</button>
+<button class="flex items-center justify-center gap-1 bg-[#14b8a6] hover:bg-[#4fdbc8] text-[#003731] py-2 rounded-lg font-label-md text-label-md font-bold transition-all active:scale-95 shadow-sm shadow-teal-950/50" onclick="openContactModal('Barış A.', 'baris.outdoor', 'baris@std.yildiz.edu.tr', 'North Face Çanta &amp; Mat', 'YTÜ Davutpaşa Kampüsü')">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>İletişime Geç</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CARD 5: Canon AE-1 Analog Fotoğraf Makinesi -->
+<div class="bg-[#131b2e] rounded-xl border border-slate-800 shadow-md hover:border-slate-700 hover:shadow-xl transition-all flex flex-col overflow-hidden group">
+<!-- OFFERING -->
+<div class="p-space-md flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="bg-[#0c2826] text-[#4fdbc8] border border-[#14b8a6]/40 text-[11px] font-bold tracking-wider px-2.5 py-0.5 rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_circle_up</span> VERİLEN
+            </span>
+<span class="text-body-sm font-body-sm bg-[#1a243b] text-[#94a3b8] border border-slate-700/50 px-2 py-0.5 rounded font-medium">
+              Çalışır Durumda
+            </span>
+</div>
+<div class="relative overflow-hidden rounded-lg h-44 bg-[#0b1326]">
+<img alt="Canon AE-1 Analog Kamera" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" data-alt="Vintage silver and black Canon AE-1 35mm film SLR camera with 50mm lens placed on wooden artist work table with soft directional daylight highlighting the metallic textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqK_S8u4FQLgd_rGa40uT0CAJRB72XZzVDEeDgcPnwoYCb8s9yaA4addh3Mrxbx8AkTMjSnzOOlftr09llrm1S8D9adjLpT8okpythf-Pkz842Ur28hFipj4eKbRpby1ljMYZ5HQxoIdd_gjI3DKWv6K8JNDwjexqDN7_dFSk7g-6fvJcAzBoVtFkzup0SRrhmgeJrmpE938EgytXxVks6IwM9dqxvxtAE8neqp7s"/>
+<div class="absolute top-2 left-2 bg-[#0b1326]/85 text-[#dae2fd] border border-slate-700 px-2 py-0.5 rounded text-label-sm font-label-sm backdrop-blur-sm">
+              Müzik/Hobi
+            </div>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-[#f8fafc] font-bold group-hover:text-[#4fdbc8] transition-colors">
+              Canon AE-1 (50mm f/1.8)
+            </h3>
+<p class="font-body-sm text-body-sm text-[#94a3b8] line-clamp-1 mt-0.5">
+              Enstantane ve pozometresi sorunsuz. Yanında 1 adet Kodak Gold film hediyeli.
+            </p>
+</div>
+</div>
+<div class="relative flex items-center justify-center px-space-md">
+<div class="w-full border-t border-slate-800"></div>
+<div class="absolute bg-[#131b2e] px-2 text-[#4fdbc8] font-bold text-label-sm flex items-center gap-1 border border-slate-800 rounded-full">
+<span class="material-symbols-outlined text-[#fb923c] text-[20px]">swap_vertical_circle</span>
+</div>
+</div>
+<!-- WANT -->
+<div class="p-space-md bg-[#2a1b14]/70 border-t border-b border-[#fb923c]/20 flex flex-col gap-1.5 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="bg-[#ec6a06]/20 text-[#fb923c] border border-[#ec6a06]/40 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">ARANAN</span>
+<span class="text-[#fb923c] font-semibold text-label-sm">Karşılığında Tercih:</span>
+</div>
+<p class="font-title-md text-title-md text-[#ffdbca] font-bold">
+            Marshall Hoparlör veya Bisiklet Ekipmanı
+          </p>
+<span class="text-body-sm font-body-sm text-[#e2e8f0]/80">Emberton/Stockwell taşınabilir hoparlör veya kask + kilit seti.</span>
+</div>
+<!-- FOOTER -->
+<div class="p-space-md bg-[#131b2e] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Defne C." class="w-8 h-8 rounded-full object-cover ring-1 ring-[#4fdbc8]" data-alt="Artistic portrait photograph of a young female visual communication design student smiling warmly wearing a patterned shirt in an art studio setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeILgJHzC_xx6Q4M8qowTxYAr1WubIpOrUsbzoBecapP3nochZas7fOa5M1TUdy3b32mLzu64ASkYD75rkjYQDBjNrpjo8fPoZTGV_2RMwbVGHaEtJ7eMVJRIWNAoIIA-GO35vZK9X-Jhe6smXSuxZkekXwXM-bU0eCkn6skVsJ3AXDTGD1RnllLnAOL2PixYnPkSol7ZxWQu812iK88ICm9tG8V7CjPlek0SziYY"/>
+<div>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-[#f8fafc]">Defne C.</span>
+<span class="text-body-sm font-body-sm text-[#94a3b8]">(Görsel İletişim)</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[14px] text-[#4fdbc8]">location_on</span>
+<span>Marmara Göztepe</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-[#1a243b] px-2 py-1 rounded text-label-sm font-label-sm font-bold text-[#4fdbc8] border border-slate-700/60">
+<span class="material-symbols-outlined text-[15px] text-[#fb923c]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>5.0</span>
+<span class="text-[#94a3b8] text-[10px] font-normal">(15 Takas)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="flex items-center justify-center gap-1 bg-[#1a243b] hover:bg-[#222e49] text-[#e2e8f0] border border-slate-700 py-2 rounded-lg font-label-md text-label-md transition-all active:scale-95" onclick="openContactModal('Defne C.', 'defne.visuals', 'defne@marun.edu.tr', 'Canon AE-1 Analog Kamera', 'Marmara Göztepe Yemekhane Önü')">
+<span class="material-symbols-outlined text-[16px] text-[#fb923c]">alternate_email</span>
+<span>@defne.visuals</span>
+</button>
+<button class="flex items-center justify-center gap-1 bg-[#14b8a6] hover:bg-[#4fdbc8] text-[#003731] py-2 rounded-lg font-label-md text-label-md font-bold transition-all active:scale-95 shadow-sm shadow-teal-950/50" onclick="openContactModal('Defne C.', 'defne.visuals', 'defne@marun.edu.tr', 'Canon AE-1 Analog Kamera', 'Marmara Göztepe Kampüsü')">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>İletişime Geç</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CARD 6: Yurt Tipi Mini Buzdolabı & Su Isıtıcı -->
+<div class="bg-[#131b2e] rounded-xl border border-slate-800 shadow-md hover:border-slate-700 hover:shadow-xl transition-all flex flex-col overflow-hidden group">
+<!-- OFFERING -->
+<div class="p-space-md flex flex-col gap-space-sm relative">
+<div class="flex items-center justify-between">
+<span class="bg-[#0c2826] text-[#4fdbc8] border border-[#14b8a6]/40 text-[11px] font-bold tracking-wider px-2.5 py-0.5 rounded uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">arrow_circle_up</span> VERİLEN
+            </span>
+<span class="text-body-sm font-body-sm bg-[#2a1b14] text-[#fb923c] border border-[#ec6a06]/40 px-2 py-0.5 rounded font-bold">
+              Mezun Oluyor
+            </span>
+</div>
+<div class="relative overflow-hidden rounded-lg h-44 bg-[#0b1326]">
+<img alt="Yurt Tipi Mini Buzdolabı" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 opacity-90 group-hover:opacity-100" data-alt="Clean bright photograph of a compact white dorm mini fridge with a stainless steel electric kettle sitting on top in a neat bright modern university dormitory room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqtMvL_CPk0QkOP_gIT6soO3QI2ime4u9xOXfc2A8dbr7yM3VQEnicJytX9p64uMtTwzmdlIP8SEkulI9qkRjdW6-VZHTYTRMro_fTPV_VFttrI7Xuqj3CbSmpfgpkHxzpjbfQSKmlACiOsP1WRewkmnZnGDdwBDf0yDNA6IZWKJb8LMnSK67wt4vVq1GU4hfOuzWLJ3RjYrg3JMYbchm_GoT1g9Xm9_qtjTJoKFc"/>
+<div class="absolute top-2 left-2 bg-[#0b1326]/85 text-[#dae2fd] border border-slate-700 px-2 py-0.5 rounded text-label-sm font-label-sm backdrop-blur-sm">
+              Yurt/Ev Eşyası
+            </div>
+</div>
+<div>
+<h3 class="font-title-lg text-title-lg text-[#f8fafc] font-bold group-hover:text-[#4fdbc8] transition-colors">
+              Mini Buzdolabı + Su Isıtıcı
+            </h3>
+<p class="font-body-sm text-body-sm text-[#94a3b8] line-clamp-1 mt-0.5">
+              Regal A+ sessiz kompresörlü mini dolap. Yurt odası için ideal, kusursuz soğutuyor.
+            </p>
+</div>
+</div>
+<div class="relative flex items-center justify-center px-space-md">
+<div class="w-full border-t border-slate-800"></div>
+<div class="absolute bg-[#131b2e] px-2 text-[#4fdbc8] font-bold text-label-sm flex items-center gap-1 border border-slate-800 rounded-full">
+<span class="material-symbols-outlined text-[#fb923c] text-[20px]">swap_vertical_circle</span>
+</div>
+</div>
+<!-- WANT -->
+<div class="p-space-md bg-[#2a1b14]/70 border-t border-b border-[#fb923c]/20 flex flex-col gap-1.5 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="bg-[#ec6a06]/20 text-[#fb923c] border border-[#ec6a06]/40 px-2 py-0.5 rounded text-[10px] uppercase font-bold tracking-wider">ARANAN</span>
+<span class="text-[#fb923c] font-semibold text-label-sm">Karşılığında Tercih:</span>
+</div>
+<p class="font-title-md text-title-md text-[#ffdbca] font-bold">
+            Valiz Seti veya Kindle E-Okuyucu
+          </p>
+<span class="text-body-sm font-body-sm text-[#e2e8f0]/80">Taşınacağım için büyük boy kaliteli tekerlekli valiz ya da Paperwhite takas.</span>
+</div>
+<!-- FOOTER -->
+<div class="p-space-md bg-[#131b2e] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<img alt="Kaan T." class="w-8 h-8 rounded-full object-cover ring-1 ring-[#4fdbc8]" data-alt="Portrait photography of a confident smiling male mechanical engineering graduate student holding a tablet in front of bright modern campus laboratory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDls0nJLY4lUlzpJzFB7dqw7UeY3Bsw0RNfEOzxEFO2v7SahZu3b43uo4Fc13TafbtBrqRGAoocRhAIIvvWVQTmqA4snA2UPIZRP_PXlnI73FFbsU1hjOgbjCMWhW7cUNWbK09URxY5lK9hV-YDrQ6_ObP23qhPc6_5ARQ1w0LqB2wK6cvylkhVucKCIH3r6iGtgQiXceQwsjKH41w-WbeXP5ECgJ0_Eb3THzEEkpc"/>
+<div>
+<div class="flex items-center gap-1">
+<span class="font-label-md text-label-md font-bold text-[#f8fafc]">Kaan T.</span>
+<span class="text-body-sm font-body-sm text-[#94a3b8]">(Makine Müh.)</span>
+</div>
+<div class="flex items-center gap-1 text-label-sm font-label-sm text-[#94a3b8]">
+<span class="material-symbols-outlined text-[14px] text-[#4fdbc8]">location_on</span>
+<span>İTÜ Maslak</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1 bg-[#1a243b] px-2 py-1 rounded text-label-sm font-label-sm font-bold text-[#4fdbc8] border border-slate-700/60">
+<span class="material-symbols-outlined text-[15px] text-[#fb923c]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>4.9</span>
+<span class="text-[#94a3b8] text-[10px] font-normal">(8 Takas)</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<button class="flex items-center justify-center gap-1 bg-[#1a243b] hover:bg-[#222e49] text-[#e2e8f0] border border-slate-700 py-2 rounded-lg font-label-md text-label-md transition-all active:scale-95" onclick="openContactModal('Kaan T.', 'kaan.itu', 'kaan@itu.edu.tr', 'Mini Buzdolabı + Su Isıtıcı', 'İTÜ Gölet Yurtları Girişi')">
+<span class="material-symbols-outlined text-[16px] text-[#fb923c]">alternate_email</span>
+<span>@kaan.itu</span>
+</button>
+<button class="flex items-center justify-center gap-1 bg-[#14b8a6] hover:bg-[#4fdbc8] text-[#003731] py-2 rounded-lg font-label-md text-label-md font-bold transition-all active:scale-95 shadow-sm shadow-teal-950/50" onclick="openContactModal('Kaan T.', 'kaan.itu', 'kaan@itu.edu.tr', 'Mini Buzdolabı + Su Isıtıcı', 'İTÜ Maslak Kampüsü')">
+<span class="material-symbols-outlined text-[16px]">mail</span>
+<span>İletişime Geç</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- TRUST & SAFETY SECTION BANNER -->
+<section class="bg-[#131b2e] rounded-xl p-space-lg border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-space-lg shadow-lg">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-[#0c2826] border border-[#14b8a6]/40 text-[#4fdbc8] flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">shield</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm font-bold text-[#f8fafc]">Kampüste %100 Güvenli Barter Kültürü</h4>
+<p class="font-body-md text-body-md text-[#94a3b8] max-w-2xl mt-1">
+            Takasla platformundaki tüm profiller üniversite e-posta adresleri (<strong>.edu.tr</strong>) ile doğrulanır. Nakit para el değiştirmeden, kampüs ortak alanlarında doğrudan yüz yüze takas yapılır.
+          </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="bg-[#1a243b] hover:bg-[#222e49] text-[#e2e8f0] px-4 py-2.5 rounded-lg border border-slate-700 font-label-lg text-label-lg transition-colors">
+          Güvenli Takas İpuçları
+        </button>
+<button class="bg-[#14b8a6] hover:bg-[#4fdbc8] text-[#003731] font-bold px-4 py-2.5 rounded-lg font-label-lg text-label-lg transition-colors shadow-md shadow-teal-950/40">
+          Öğrenci Doğrulaması Yap
+        </button>
+</div>
+</section>
+</main>
+<!-- ================= INTERACTIVE CONTACT MODAL (POPUP SHEET) ================= -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-4 hidden opacity-0 transition-opacity duration-200" id="contactModal">
+<div class="bg-[#131b2e] rounded-xl max-w-lg w-full p-space-lg border border-slate-700/80 shadow-2xl relative flex flex-col gap-space-md text-[#dae2fd]">
+<!-- Close Button -->
+<button class="absolute top-4 right-4 p-1.5 rounded-full text-[#94a3b8] hover:text-[#f8fafc] hover:bg-[#1a243b] transition-colors" onclick="closeContactModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<!-- Modal Header -->
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-[#0c2826] text-[#4fdbc8] border border-[#14b8a6]/40 flex items-center justify-center font-bold text-headline-sm" id="modalAvatarChar">
+          S
+        </div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-sm text-headline-sm font-bold text-[#f8fafc]" id="modalStudentName">Selin Y.</h3>
+<span class="bg-[#0c2826] text-[#4fdbc8] border border-[#14b8a6]/40 text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+              Doğrulanmış Öğrenci
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-[#94a3b8]" id="modalItemTitle">İlan: iPad 9. Nesil + Apple Pencil</p>
+</div>
+</div>
+<!-- Meetup Spot Advice -->
+<div class="bg-[#0b1326] p-3.5 rounded-lg border border-slate-800 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-[#4fdbc8] text-[20px] shrink-0 mt-0.5">place</span>
+<div>
+<span class="font-label-md text-label-md font-bold text-[#f8fafc] block">Önerilen Kampüs Buluşma Noktası:</span>
+<span class="text-body-sm font-body-sm text-[#cbd5e1]" id="modalMeetupLocation">İTÜ Ayazağa Kampüsü (Kütüphane veya Merkezi Kafeterya)</span>
+</div>
+</div>
+<!-- Action 1: Instagram DM -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase font-bold text-[#94a3b8]">Seçenek 1: Instagram'dan Yaz</span>
+<div class="flex items-center gap-2">
+<a class="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 via-rose-500 to-purple-600 text-white font-label-lg text-label-lg py-2.5 px-4 rounded-lg shadow-sm hover:opacity-95 transition-opacity" href="#" id="modalIgLink" target="_blank">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+<span id="modalIgHandle">Instagram DM Gönder (@selin.arch)</span>
+</a>
+<button class="p-2.5 border border-slate-700 rounded-lg hover:bg-[#1a243b] transition-colors text-[#e2e8f0]" onclick="copyToClipboard('modalIgVal')" title="Kullanıcı Adını Kopyala">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+</div>
+<span class="hidden" id="modalIgVal"></span>
+</div>
+<!-- Action 2: Direct Edu Email -->
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm uppercase font-bold text-[#94a3b8]">Seçenek 2: Doğrulanmış Öğrenci E-Postası</span>
+<div class="flex items-center gap-2">
+<a class="flex-1 flex items-center justify-center gap-2 bg-[#14b8a6] hover:bg-[#4fdbc8] text-[#003731] font-label-lg text-label-lg font-bold py-2.5 px-4 rounded-lg transition-colors shadow-sm" href="#" id="modalEmailLink">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+<span id="modalEmailText">selin@student.itu.edu.tr</span>
+</a>
+<button class="p-2.5 border border-slate-700 rounded-lg hover:bg-[#1a243b] transition-colors text-[#e2e8f0]" onclick="copyToClipboard('modalEmailVal')" title="E-postayı Kopyala">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+</div>
+<span class="hidden" id="modalEmailVal"></span>
+</div>
+<!-- Safe Exchange Reminders Box -->
+<div class="bg-[#2a1b14] rounded-lg p-3 border border-[#ec6a06]/40 flex items-start gap-2">
+<span class="material-symbols-outlined text-[#fb923c] text-[18px] shrink-0 mt-0.5">info</span>
+<p class="text-body-sm font-body-sm text-[#ffdbca]">
+<strong>Güvenlik İlkesi:</strong> Para transferi veya kargo ödemesi yapmayın. Takası daima gün ışığında, kampüs güvenlik noktalarına ve öğrenci merkezlerine yakın yerlerde gerçekleştirin.
+        </p>
+</div>
+<div class="flex justify-end pt-1">
+<button class="px-4 py-2 font-label-md text-label-md text-[#94a3b8] hover:text-[#f8fafc] transition-colors" onclick="closeContactModal()">
+          Kapat
+        </button>
+</div>
+</div>
+</div>
+<!-- Notification Toast for Copy Action -->
+<div class="fixed bottom-6 right-6 bg-[#131b2e] text-[#f8fafc] border border-slate-700 px-4 py-2.5 rounded-lg shadow-xl text-label-md font-label-md flex items-center gap-2 transform translate-y-20 opacity-0 transition-all duration-300 z-50" id="toast">
+<span class="material-symbols-outlined text-[#4fdbc8] text-[18px]">check_circle</span>
+<span id="toastMsg">Panoya kopyalandı!</span>
+</div>
+<!-- ================= FOOTER ================= -->
+<footer class="bg-[#0b1326] border-t border-slate-800 mt-auto">
+<div class="w-full px-margin py-space-xl max-w-7xl mx-auto flex flex-col gap-space-lg">
+<!-- Top Row: Brand & Platform Mission -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-gradient-to-br from-[#14b8a6] to-[#006b5f] flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">swap_horizontal_circle</span>
+</div>
+<span class="text-title-lg font-title-lg font-bold text-white">Takas<span class="text-[#4fdbc8]">la</span></span>
+</div>
+<p class="text-body-sm font-body-sm text-[#94a3b8] max-w-md">
+            Üniversite öğrencileri için sıfır maliyetli, sürdürülebilir döngüsel takas ekosistemi.
+          </p>
+</div>
+<!-- Campus Stats Pill -->
+<div class="flex items-center gap-space-md text-body-sm font-body-sm text-[#94a3b8]">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#4fdbc8]"></span>
+<span>28 Aktif Üniversite</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-[#fb923c]"></span>
+<span>4.200+ Gerçekleşen Takas</span>
+</div>
+</div>
+</div>
+<!-- Links Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-space-sm pt-space-sm border-t border-slate-800/80">
+<a class="text-[#94a3b8] hover:text-[#4fdbc8] transition-colors text-body-sm font-body-sm" href="#">
+          Güvenli Takas İpuçları
+        </a>
+<a class="text-[#94a3b8] hover:text-[#4fdbc8] transition-colors text-body-sm font-body-sm" href="#">
+          Topluluk Kuralları
+        </a>
+<a class="text-[#94a3b8] hover:text-[#4fdbc8] transition-colors text-body-sm font-body-sm" href="#">
+          Hakkımızda
+        </a>
+<a class="text-[#94a3b8] hover:text-[#4fdbc8] transition-colors text-body-sm font-body-sm" href="#">
+          Kampüs Temsilciliği
+        </a>
+<a class="text-[#94a3b8] hover:text-[#4fdbc8] transition-colors text-body-sm font-body-sm" href="#">
+          Gizlilik ve Güvenlik
+        </a>
+<a class="text-[#94a3b8] hover:text-[#4fdbc8] transition-colors text-body-sm font-body-sm" href="#">
+          Yardım Merkezi
+        </a>
+</div>
+<!-- Bottom Copyright String -->
+<div class="pt-space-sm border-t border-slate-800/80 flex flex-col sm:flex-row justify-between items-center text-body-sm font-body-sm text-[#859490] gap-2">
+<p>© 2024 Takasla - Üniversiteler Arası Güvenli Takas Platformu. Tüm hakları saklıdır.</p>
+<div class="flex items-center gap-3">
+<span class="text-label-sm font-label-sm text-[#4fdbc8] font-bold">#SıfırParaTamTakas</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- ================= INLINE SCRIPT FOR MODALS & INTERACTIONS ================= -->
+<script>
+    // Modal Management
+    const contactModal = document.getElementById('contactModal');
+    
+    function openContactModal(studentName, igHandle, email, itemTitle, meetup) {
+      document.getElementById('modalStudentName').textContent = studentName;
+      document.getElementById('modalAvatarChar').textContent = studentName.charAt(0);
+      document.getElementById('modalItemTitle').textContent = 'İlan: ' + itemTitle;
+      document.getElementById('modalMeetupLocation').textContent = meetup;
+      
+      document.getElementById('modalIgHandle').textContent = 'Instagram DM (@' + igHandle + ')';
+      document.getElementById('modalIgLink').href = 'https://instagram.com/' + igHandle;
+      document.getElementById('modalIgVal').textContent = '@' + igHandle;
+      
+      document.getElementById('modalEmailText').textContent = email;
+      document.getElementById('modalEmailLink').href = 'mailto:' + email + '?subject=Takasla İlanı Hakkında: ' + encodeURIComponent(itemTitle);
+      document.getElementById('modalEmailVal').textContent = email;
+
+      contactModal.classList.remove('hidden');
+      setTimeout(() => {
+        contactModal.classList.remove('opacity-0');
+      }, 10);
+    }
+
+    function closeContactModal() {
+      contactModal.classList.add('opacity-0');
+      setTimeout(() => {
+        contactModal.classList.add('hidden');
+      }, 200);
+    }
+
+    // Close on Scrim Click
+    contactModal.addEventListener('click', (e) => {
+      if (e.target === contactModal) {
+        closeContactModal();
+      }
+    });
+
+    // Clipboard Copy Helper
+    function copyToClipboard(elementId) {
+      const text = document.getElementById(elementId).textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(text + ' panoya kopyalandı!');
+      }).catch(() => {
+        showToast('Kopyalandı: ' + text);
+      });
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.textContent = message;
+      toast.classList.remove('translate-y-20', 'opacity-0');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+      }, 2400);
+    }
+
+    // Interactive campus selection quick toggle
+    const campuses = [
+      'İTÜ Ayazağa Kampüsü',
+      'ODTÜ Merkez Kampüs',
+      'Boğaziçi Güney Kampüs',
+      'Yıldız Davutpaşa',
+      'Marmara Göztepe'
+    ];
+    let campusIdx = 0;
+    const campusBtn = document.getElementById('campusMenuBtn');
+    if (campusBtn) {
+      campusBtn.addEventListener('click', () => {
+        campusIdx = (campusIdx + 1) % campuses.length;
+        document.getElementById('currentCampusLabel').textContent = campuses[campusIdx];
+        showToast('Kampüs seçildi: ' + campuses[campusIdx]);
+      });
+    }
+
+    // Dark / Light Mode Toggle Functionality
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeIcon = document.getElementById('themeIcon');
+    let isDark = true;
+
+    themeToggleBtn.addEventListener('click', () => {
+      isDark = !isDark;
+      if (isDark) {
+        document.documentElement.classList.add('dark');
+        themeIcon.textContent = 'light_mode';
+        showToast('Karanlık mod aktif');
+      } else {
+        document.documentElement.classList.remove('dark');
+        themeIcon.textContent = 'dark_mode';
+        showToast('Aydınlık mod aktif');
+      }
+    });
+</script>
+</body></html>

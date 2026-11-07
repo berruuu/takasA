@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Takasla - İlan Detayı &amp; Takas Teklifi Modalı</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-highest": "#2d3449",
+            "on-secondary": "#552100",
+            "on-secondary-fixed-variant": "#783200",
+            "secondary-container": "#ec6a06",
+            "inverse-primary": "#006b5f",
+            "border-subtle": "#334155",
+            "on-primary-container": "#00423b",
+            "secondary": "#ffb690",
+            "surface-card": "#1e293b",
+            "on-primary-fixed-variant": "#005048",
+            "outline-variant": "#3c4947",
+            "surface": "#0b1326",
+            "tertiary-fixed-dim": "#3cddc7",
+            "border-highlight": "#475569",
+            "tertiary-fixed": "#62fae3",
+            "on-surface": "#dae2fd",
+            "surface-card-elevated": "#1f2937",
+            "surface-tint": "#4fdbc8",
+            "surface-dim": "#0b1326",
+            "on-secondary-fixed": "#341100",
+            "on-error-container": "#ffdad6",
+            "on-primary": "#003731",
+            "on-secondary-container": "#4a1c00",
+            "surface-container-low": "#131b2e",
+            "primary-fixed-dim": "#4fdbc8",
+            "inverse-on-surface": "#283044",
+            "error-container": "#93000a",
+            "surface-variant": "#2d3449",
+            "on-tertiary-fixed": "#00201c",
+            "surface-canvas": "#0f172a",
+            "outline": "#859490",
+            "secondary-fixed": "#ffdbca",
+            "have-container": "#0c2826",
+            "tertiary": "#3cddc7",
+            "surface-container": "#171f33",
+            "accent-orange-bright": "#fb923c",
+            "on-tertiary-fixed-variant": "#005047",
+            "background": "#0b1326",
+            "want-container": "#2a1b14",
+            "surface-container-high": "#222a3d",
+            "error": "#ffb4ab",
+            "surface-container-lowest": "#060e20",
+            "surface-bright": "#31394d",
+            "primary-fixed": "#71f8e4",
+            "on-error": "#690005",
+            "text-muted": "#94a3b8",
+            "text-primary": "#f8fafc",
+            "on-primary-fixed": "#00201c",
+            "primary-container": "#14b8a6",
+            "on-tertiary-container": "#00423a",
+            "text-secondary": "#e2e8f0",
+            "tertiary-container": "#00b8a5",
+            "secondary-fixed-dim": "#ffb690",
+            "on-surface-variant": "#bbcac6",
+            "on-background": "#dae2fd",
+            "surface-base": "#090d16",
+            "on-tertiary": "#003731",
+            "inverse-surface": "#dae2fd",
+            "primary": "#4fdbc8"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "gutter": "1.5rem",
+            "space-xs": "0.25rem",
+            "margin-mobile": "1rem",
+            "gutter-mobile": "1rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "margin": "2rem"
+          },
+          "fontFamily": {
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "body-sm": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined.fill-icon {
+      font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Custom dark subtle scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0f172a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #475569;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md text-body-md overflow-x-hidden selection:bg-primary-container selection:text-white">
+<!-- ==================== BACKGROUND PLATFORM CANVAS (BLURRED / OVERLAID) ==================== -->
+<div class="filter blur-[5px] pointer-events-none select-none opacity-20 transition-all duration-300">
+<!-- TopNavBar (Shared Component Anchor) -->
+<header class="bg-surface-container-low border-b border-border-subtle shadow-lg docked full-width top-0 sticky z-10">
+<div class="flex justify-between items-center w-full px-margin md:px-margin max-w-7xl mx-auto h-20">
+<div class="flex items-center gap-space-lg">
+<span class="text-headline-md font-headline-md font-extrabold text-primary tracking-tight">Takasla</span>
+<div class="relative hidden lg:block w-72">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container-high pl-10 pr-4 py-2 rounded-lg text-body-md border-0 text-text-primary placeholder:text-outline focus:ring-2 focus:ring-primary" placeholder="Ders notu, monitör, bisiklet ara..." type="text"/>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-space-md">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-lg text-label-lg" href="#">Elektronik</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Ders Notları/Kitap</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Giyim</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Müzik/Hobi</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-lg text-label-lg" href="#">Yurt/Ev Eşyası</a>
+</nav>
+<div class="flex items-center gap-space-sm">
+<button class="bg-surface-container text-primary px-3 py-2 rounded-lg font-label-md text-label-md flex items-center gap-1 border border-border-subtle">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+            Kampüs Seç
+          </button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-lg text-label-lg shadow-sm font-semibold">
+            İlan Ver
+          </button>
+</div>
+</div>
+</header>
+<!-- Simulated Mock Page Content -->
+<main class="max-w-7xl mx-auto px-margin py-space-xl">
+<div class="h-10 w-64 bg-surface-container-high rounded-lg mb-8"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<div class="h-80 bg-surface-container-low rounded-lg border border-border-subtle p-4"></div>
+<div class="h-80 bg-surface-container-low rounded-lg border border-border-subtle p-4"></div>
+<div class="h-80 bg-surface-container-low rounded-lg border border-border-subtle p-4"></div>
+<div class="h-80 bg-surface-container-low rounded-lg border border-border-subtle p-4"></div>
+</div>
+</main>
+</div>
+<!-- ==================== MODAL OVERLAY & CONTAINER ==================== -->
+<div class="fixed inset-0 z-50 overflow-y-auto bg-surface-container-lowest/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 md:p-8 animate-fadeIn">
+<!-- Modal Card (Centerpiece) -->
+<div class="relative w-full max-w-5xl bg-surface-container-low rounded-xl shadow-2xl shadow-black/80 border border-border-subtle/80 overflow-hidden flex flex-col my-auto max-h-[962px]">
+<!-- Modal Top Navigation / Header Anchor -->
+<div class="px-space-md sm:px-space-lg py-space-md border-b border-border-subtle/70 bg-surface-container-low/95 backdrop-blur-sm flex items-center justify-between sticky top-0 z-20">
+<div class="flex items-center gap-2 sm:gap-3 flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/15 text-primary border border-primary/30 font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">sync_alt</span>
+            Aktif Takas İlanı
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm border border-border-subtle">
+<span class="material-symbols-outlined text-[14px]">school</span>
+            İTÜ Ayazağa Kampüsü
+          </span>
+<span class="text-text-muted text-label-sm font-label-sm hidden sm:inline">• 2 saat önce güncellendi</span>
+</div>
+<div class="flex items-center gap-1.5 sm:gap-2">
+<!-- Share button -->
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-text-primary hover:bg-surface-container-high transition-colors flex items-center justify-center" title="İlanı Paylaş">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+<!-- Bookmark button -->
+<button class="p-2 rounded-lg text-on-surface-variant hover:text-text-primary hover:bg-surface-container-high transition-colors flex items-center justify-center" title="Kaydet">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+</button>
+<!-- Close button -->
+<button class="p-2 ml-1 rounded-lg text-on-surface-variant hover:text-error hover:bg-error-container/30 transition-colors flex items-center justify-center" title="Kapat">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+</div>
+<!-- Modal Scrollable Content Canvas -->
+<div class="overflow-y-auto px-space-md sm:px-space-lg py-space-md sm:py-space-lg space-y-space-lg">
+<!-- Title & Condition Badges Hero Row -->
+<div class="space-y-2">
+<div class="flex flex-wrap items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container text-on-primary text-label-sm font-label-sm font-bold tracking-wide">
+              VERİLEN
+            </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-text-secondary border border-border-subtle text-label-sm font-label-sm font-semibold">
+              Sıfır Ayarında
+            </span>
+<span class="px-2.5 py-0.5 rounded-full bg-surface-container-high text-text-secondary border border-border-subtle text-label-sm font-label-sm font-semibold">
+              Garantili / Kutulu
+            </span>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/20 border border-secondary-container/40 text-secondary text-label-sm font-label-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-accent-orange-bright">bolt</span>
+              Hızlı Takas
+            </span>
+</div>
+<h1 class="text-headline-sm sm:text-headline-md font-headline-md text-text-primary font-extrabold tracking-tight">
+            iPad 9. Nesil (64 GB, Uzay Grisi) + Apple Pencil 1
+          </h1>
+</div>
+<!-- 2-COLUMN MAIN CONTENT GRID -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Product Showcase & Description & Barter Target (7 cols) -->
+<div class="lg:col-span-7 space-y-space-lg">
+<!-- Photo Gallery (Main + Thumbnails) -->
+<div class="space-y-3">
+<div class="relative rounded-xl overflow-hidden bg-surface-container-high aspect-[16/10] border border-border-subtle group">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]" data-alt="A clean modern high-angle photograph of a pristine space gray iPad 9th generation and a first-generation Apple Pencil lying neatly on a light minimalist Scandinavian wooden university study desk. The tablet screen shows subtle architectural sketching blueprints with soft ambient daylight entering from a dormitory window, casting gentle shadows and capturing pristine product condition in authentic student lifestyle tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0Zi8xsH-NB31BHy2wuxFnwPlGXzek90Mc8WVfgvbXdg6sgcjhb7Mzla0EzQilASsHHZbvKmlLf0vZYkljgFYIsFoe7rIY-RIMC6DEgEDB_uqU0hYroK7bTDUjpARDTnDbyQXCwVRrWI5az8hiqBr0tZvkCB2F5mNfCpUvvy0SEKJeO26m2y95sb9cuEAV4xHtZ8BHTNiZFdInNk87JMN4iUAV3kPaRoR5sBZpYnA"/>
+<div class="absolute top-3 left-3 bg-surface-container-lowest/85 backdrop-blur-md text-text-primary border border-border-subtle px-2.5 py-1 rounded-lg text-label-sm font-label-sm flex items-center gap-1.5 shadow-md">
+<span class="material-symbols-outlined text-[16px] text-primary fill-icon">verified</span>
+                  Öğrenci Doğrulanmış Görsel
+                </div>
+<div class="absolute bottom-3 right-3 bg-surface-container-lowest/85 backdrop-blur-md text-text-primary border border-border-subtle px-2 py-0.5 rounded-full text-label-sm font-label-sm font-semibold">
+                  1 / 4
+                </div>
+</div>
+<!-- Thumbnails -->
+<div class="grid grid-cols-4 gap-2.5">
+<div class="aspect-square rounded-lg border-2 border-primary overflow-hidden cursor-pointer shadow-md ring-2 ring-primary/20">
+<img class="w-full h-full object-cover" data-alt="Close-up detailed photographic shot of the space gray iPad 9 corner, clean glass bezel and pristine aluminum frame on a neutral campus desk under natural diffused daylight, showing absence of scratches or wear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDG-cX2o8d__VGxGVeKDa74JR66K_mJTHma9KCD_ek2xTmXymfObgngydo2H6iZt3XSLDK6zCRqaezrOeUp2Tk6eu0KZf-RUfFkWxTgY9lda8CwbBcpg3vOr2Zbh3bDucPe0_xxN3Oo03UwMN2EnLYxXJWvlJH5mxRh6k9UJ6WS65rsIicImLoOVGjGOjpbFXPOvL_WSvNcZbug7S081uay7fpwFOpG8aCmbHhupSI"/>
+</div>
+<div class="aspect-square rounded-lg border border-border-subtle overflow-hidden cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover" data-alt="Detailed flat-lay image of an Apple Pencil 1st generation alongside its magnetic cap, Lightning adapter, and extra silicone replacement tips resting cleanly in original white packaging on a student desk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq7bPGu0LhCftx6C0kETuLa5BlSeuDw5VfOSHPZbQmIbsTylxXPSUDkw7uw21JnNuFPE6YCDqFEUVDg7MpLR0Xs-60hLMsDaWN0bfJeRdw51-Y2QUk2PNz8AhmQdBwCC0mB5hs2Y2QqNGtN0Y4mAv8YmoGaT-D27Kmq5aMbNpak894EW-oe9u1twWDPf7JkbouAqCSC324resj1Z2YvFlzm-8mUo5e2NGizg14FSg"/>
+</div>
+<div class="aspect-square rounded-lg border border-border-subtle overflow-hidden cursor-pointer hover:border-primary transition-colors">
+<img class="w-full h-full object-cover" data-alt="Original Apple iPad 9 box and invoice document neatly placed alongside the folded magnetic folio protective smart cover in deep teal color on an organized library desk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGvGWlBS2xnLIycYRAp3ahHckhmN52lxpkRyTF4hrWmGLd35AOqzRQjyQBliK9mKe5EpGwaHapx5Vt7ltMxOg0IBq-QIQRV42Fm5Emd3JBtCJ2YRUdrjtW8OMplNmcbqGKvEKNjT0-c0eRx6UteJxVGx3mw9a30TuwK6xkvXDUBLOOm7IIDm93l28pUN0x73fKSa79YMsrro_UYVZ_-SwnsvRxKPIHnNZXOtNgJwI"/>
+</div>
+<div class="aspect-square rounded-lg border border-border-subtle overflow-hidden cursor-pointer hover:border-primary transition-colors relative flex items-center justify-center bg-surface-container-high">
+<img class="w-full h-full object-cover opacity-60" data-alt="Battery health settings diagnostic screen displayed on the iPad indicating high capacity and optimal performance, captured cleanly indoors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAReI85FNHqHHIHKPBxlABupvqOh5897H0HuPtuOrGuu0J6HJfGlq2Bnz_-zqxhpZyEJqirC1s_y3QBAiM0-Q9ipoUIt1cQs59wJ9hRZs8k1gIQ9UaY3Ym1T5B2s7rxl25lpEjLzO5NLItRtJ6HkXSF3Hru6sbw8HDyjBv2h9tg3p4Le4Gey8Npkf8VrJhtAKPG2vRR3Rt7QY-0IUDR84lmGV4gCws05TNEIY6JTrQ"/>
+<span class="absolute inset-0 flex items-center justify-center font-label-sm text-label-sm font-bold text-text-primary bg-surface-container-lowest/60">+1 Görsel</span>
+</div>
+</div>
+</div>
+<!-- "Verilen Ürün Açıklaması" Card -->
+<div class="bg-surface-card rounded-xl border border-border-subtle p-space-md space-y-2.5">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">info</span>
+<h3 class="text-title-md font-title-md text-text-primary font-bold">Verilen Ürün Açıklaması</h3>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed">
+                Mimarlık 1. ve 2. sınıf çizim dersleri (Procreate ve GoodNotes) için almıştım. Yeni dönemde MacBook modeline geçtiğim ve masaüstü monitöre bağlayacağım için boşa çıktı. Ekranda mat kağıt hissi veren Paperlike koruyucu takılıdır. Çiziksiz, darbesiz, kılıfı, şarj adaptörü ve yedek kalem uçlarıyla kutusunda eksiksiz teslim edilecektir.
+              </p>
+</div>
+<!-- "Takas Tercihi (İstenen Ürünler)" Special Card (Nordic Warm Barter Accent adapted to Dark Mode) -->
+<div class="rounded-xl border border-secondary-container/50 bg-want-container/90 p-space-md space-y-3 relative overflow-hidden shadow-inner">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-white text-label-sm font-label-sm font-bold tracking-wide">
+                    ARANAN
+                  </span>
+<h3 class="text-title-md font-title-md text-secondary font-bold">Takas Tercihi (İstenen Ürünler)</h3>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">swap_horizontal_circle</span>
+</div>
+<div class="bg-surface-container-lowest/80 rounded-lg p-3 border border-secondary-container/30">
+<p class="text-body-md font-body-md text-text-primary font-semibold flex items-start gap-2">
+<span class="material-symbols-outlined text-accent-orange-bright text-[18px] shrink-0 mt-0.5">keyboard</span>
+                  Mekanik Klavye (Red switch tercihi / Bluetooth özellikli) + 27 inç IPS Monitör veya dengi iPad/Tablet aksesuarı &amp; masaüstü ekipmanları.
+                </p>
+<div class="mt-2.5 pt-2 border-t border-border-subtle/40 flex flex-wrap gap-2 text-body-sm font-body-sm text-text-secondary">
+<span class="inline-flex items-center gap-1 font-medium bg-surface-container px-2 py-0.5 rounded-md border border-border-subtle/50">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Keychron / Akko klavye
+                  </span>
+<span class="inline-flex items-center gap-1 font-medium bg-surface-container px-2 py-0.5 rounded-md border border-border-subtle/50">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Dell / LG 27" Monitör
+                  </span>
+<span class="inline-flex items-center gap-1 font-medium bg-surface-container px-2 py-0.5 rounded-md border border-border-subtle/50">
+<span class="material-symbols-outlined text-[14px] text-primary">check_circle</span> Fark ödemeli takaslara açık
+                  </span>
+</div>
+</div>
+</div>
+<!-- Kampüste Güvenli Buluşma Noktası -->
+<div class="rounded-xl border border-border-subtle bg-surface-card p-space-md flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-lg bg-have-container border border-primary/30 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">location_on</span>
+</div>
+<div class="space-y-1">
+<h4 class="text-title-md font-title-md text-text-primary font-bold">Tercih Edilen Kampüs Buluşma Noktası</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">
+<strong class="text-text-primary font-semibold">İTÜ Ayazağa Kampüsü:</strong> Mustafa İnan Merkez Kütüphanesi önü veya 75. Yıl Öğrenci Sosyal Merkezi kafe alanı.
+                </p>
+<span class="text-body-sm font-body-sm text-text-muted flex items-center gap-1 pt-0.5">
+<span class="material-symbols-outlined text-[14px]">schedule</span> Hafta içi 12:00 - 18:00 arası müsait
+                </span>
+</div>
+</div>
+<!-- İlan Sahibi Bilgisi & Güvenilirlik Kartı -->
+<div class="rounded-xl border border-border-subtle bg-surface-card p-space-md space-y-4">
+<div class="flex items-center justify-between flex-wrap gap-3">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover ring-2 ring-primary" data-alt="A candid, warm, natural portrait of a young female university architecture student with shoulder-length brown hair, smiling friendly on a modern university campus courtyard, high key Scandinavian lighting aesthetic with sharp teal badge details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnTL7KqrVjCE-hbFz2jo_DuSud6HEGk25sZmMipVpnxzqVgfksoLfSXamCXpRg7eDMJvm1exv8FiRp9PPiAWTrs4ZYZdjhS5UvTmP_PqU_Thi37g1Uwn3LCp2TvDIy_6c1JJV9Ra-24I5MZnCcmX3tYMY623DM_wDh_-LmtWb6yjT2o-RocgMwvjtVxLFa6OlfrMnYV_cvcGz5aVTFpKFnN9nddfEVqrnT2XIeJ58"/>
+<span class="absolute -bottom-1 -right-1 bg-tertiary-container text-on-tertiary w-5 h-5 rounded-full flex items-center justify-center text-[12px] ring-2 ring-surface-card" title="Doğrulanmış Öğrenci">
+<span class="material-symbols-outlined text-[14px] fill-icon">verified</span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="text-title-lg font-title-lg font-bold text-text-primary">Selin Y.</h4>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-tertiary-container/30 border border-tertiary/40 text-tertiary text-label-sm font-label-sm font-bold">
+<span class="material-symbols-outlined text-[13px]">shield</span>
+                        Doğrulanmış .edu.tr
+                      </span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant">İTÜ Mimarlık Fakültesi, 3. Sınıf</p>
+</div>
+</div>
+<!-- Karma & Rating Score -->
+<div class="flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-lg border border-border-subtle">
+<span class="material-symbols-outlined text-accent-orange-bright fill-icon text-[20px]">star</span>
+<div>
+<span class="text-title-md font-title-md font-bold text-text-primary">4.9</span>
+<span class="text-body-sm font-body-sm text-text-muted"> (18 Başarılı Takas)</span>
+</div>
+</div>
+</div>
+<!-- Badges & Student Trust Attributes -->
+<div class="flex flex-wrap gap-2 pt-1 border-t border-border-subtle/50">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container text-text-secondary border border-border-subtle/50 text-label-sm font-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary">bolt</span>
+                  Hızlı Cevap Verir (&lt; 15 dk)
+                </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container text-text-secondary border border-border-subtle/50 text-label-sm font-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary">alarm_on</span>
+                  Dakik Buluşmacı
+                </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container text-text-secondary border border-border-subtle/50 text-label-sm font-label-sm font-semibold">
+<span class="material-symbols-outlined text-[14px] text-primary">check_box</span>
+                  Kayıtlı İTÜ E-Postası Onaylı
+                </span>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Interactive Action Tabs (Offer Form / Direct Contact) (5 cols) -->
+<div class="lg:col-span-5 space-y-space-md sticky top-20">
+<div class="rounded-xl border border-border-subtle bg-surface-card shadow-lg overflow-hidden">
+<!-- Tab Header Switches -->
+<div class="grid grid-cols-2 border-b border-border-subtle bg-surface-container-high/80 p-1 gap-1">
+<button class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all bg-surface-card text-primary font-bold shadow-sm border border-border-subtle" id="tab-offer-btn" onclick="switchTab('offer')">
+<span class="material-symbols-outlined text-[18px]">swap_calls</span>
+                  Takas Teklifi Yap
+                </button>
+<button class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-text-primary font-semibold" id="tab-contact-btn" onclick="switchTab('contact')">
+<span class="material-symbols-outlined text-[18px]">contacts</span>
+                  Hızlı İletişim
+                </button>
+</div>
+<!-- TAB PANE 1: Takas Teklifi Formu -->
+<div class="p-space-md sm:p-space-lg space-y-space-md block" id="pane-offer">
+<div class="flex items-center justify-between">
+<h3 class="text-title-lg font-title-lg font-bold text-text-primary">Takas Teklifi Hazırla</h3>
+<span class="text-label-sm font-label-sm text-text-muted">Karşılıklı Onaylı</span>
+</div>
+<form class="space-y-3.5" onsubmit="event.preventDefault(); alert('Teklifiniz Selin Y.\'ye güvenli bildirim olarak iletildi!');">
+<!-- Offered Item Name -->
+<div>
+<label class="block text-label-md font-label-md text-text-secondary font-semibold mb-1">
+                      Sen Ne Teklif Ediyorsun? <span class="text-error">*</span>
+</label>
+<input class="w-full bg-surface-container border border-border-subtle rounded-lg px-3 py-2 text-body-md text-text-primary placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="Örn: Keychron K2 V2 (RGB, Brown switch)" required="" type="text" value="Keychron K2 Kablosuz Mekanik Klavye"/>
+</div>
+<!-- Source Selection Dropdown -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+<div>
+<label class="block text-label-md font-label-md text-text-secondary font-semibold mb-1">
+                        Ürün Kaynağı
+                      </label>
+<select class="w-full bg-surface-container border border-border-subtle rounded-lg px-3 py-2 text-body-md text-text-primary focus:outline-none focus:ring-2 focus:ring-primary">
+<option class="bg-surface-card text-text-primary">Mevcut İlanlarımdan Seç</option>
+<option class="bg-surface-card text-text-primary" selected="">Doğrudan Yeni Ürün Gir</option>
+</select>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-text-secondary font-semibold mb-1">
+                        Ürün Durumu <span class="text-error">*</span>
+</label>
+<select class="w-full bg-surface-container border border-border-subtle rounded-lg px-3 py-2 text-body-md text-text-primary focus:outline-none focus:ring-2 focus:ring-primary">
+<option class="bg-surface-card text-text-primary" selected="">Sıfır Ayarında / Çok Temiz</option>
+<option class="bg-surface-card text-text-primary">Az Kullanılmış</option>
+<option class="bg-surface-card text-text-primary">Kutulu &amp; Faturalı</option>
+<option class="bg-surface-card text-text-primary">Kullanım İzi Var</option>
+</select>
+</div>
+</div>
+<!-- Upload or Attach Snapshot Area -->
+<div>
+<label class="block text-label-md font-label-md text-text-secondary font-semibold mb-1">
+                      Ürününün Fotoğrafı
+                    </label>
+<div class="border-2 border-dashed border-border-subtle hover:border-primary rounded-lg p-3 text-center bg-surface-container/60 hover:bg-surface-container transition-colors cursor-pointer flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">add_photo_alternate</span>
+<span class="text-body-sm font-body-sm text-text-secondary font-medium">Fotoğraf ekle veya sürükle bırak</span>
+</div>
+</div>
+<!-- Additional Monetary Offset (Optional) -->
+<div>
+<div class="flex justify-between items-center mb-1">
+<label class="text-label-md font-label-md text-text-secondary font-semibold">
+                        Fark Önerisi (Opsiyonel)
+                      </label>
+<span class="text-label-sm font-label-sm text-text-muted">Dengeleme için</span>
+</div>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-text-muted font-bold">₺</span>
+<input class="w-full bg-surface-container border border-border-subtle rounded-lg pl-8 pr-3 py-2 text-body-md text-text-primary placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary" placeholder="0 (Eğer ürünün değeri daha düşükse fark teklif edebilirsin)" type="number"/>
+</div>
+</div>
+<!-- Message / Note to Owner -->
+<div>
+<label class="block text-label-md font-label-md text-text-secondary font-semibold mb-1">
+                      Selin'e Teklif Notun
+                    </label>
+<textarea class="w-full bg-surface-container border border-border-subtle rounded-lg p-3 text-body-md text-text-primary placeholder:text-outline focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all" rows="3">Merhaba Selin, elimde temiz Keychron K2 mekanik klavye var, kutusu duruyor. Ayrıca aradığın monitör yerine fark bedeli veya Asus 24" IPS ekran ile takas teklif etmek isterim. Kütüphane önünde inceleyebilirsin.</textarea>
+</div>
+<!-- Submit Action Button -->
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-bold py-3 px-4 rounded-lg font-label-lg text-label-lg shadow-lg hover:shadow-primary/20 transition-all duration-200 flex items-center justify-center gap-2 active:scale-98" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+                    Takas Teklifini Gönder
+                  </button>
+<p class="text-[11px] text-center text-text-muted">
+                    Teklif gönderildiğinde ilan sahibi bilgilendirilir, kabul edilene kadar bağlayıcı değildir.
+                  </p>
+</form>
+</div>
+<!-- TAB PANE 2: Hızlı İletişime Geç (Direct Contact Sheet) -->
+<div class="p-space-md sm:p-space-lg space-y-space-md hidden" id="pane-contact">
+<div class="space-y-1">
+<h3 class="text-title-lg font-title-lg font-bold text-text-primary">Doğrudan İletişime Geç</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">
+                    Selin Y. kampüs içi hızlı iletişim kanallarını doğrulanmış Takasla üyelerine açtı.
+                  </p>
+</div>
+<!-- Instagram DM Channel Card -->
+<div class="rounded-xl border border-border-subtle p-3.5 bg-surface-container hover:bg-surface-container-high transition-colors space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 text-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</div>
+<div>
+<div class="text-label-lg font-label-lg font-bold text-text-primary">Instagram Profili</div>
+<div class="text-body-sm font-body-sm text-primary font-semibold">@selin.arch</div>
+</div>
+</div>
+<span class="text-label-sm font-label-sm bg-tertiary-container/30 border border-tertiary/40 text-tertiary font-bold px-2 py-0.5 rounded-full">
+                      Eşleşti
+                    </span>
+</div>
+<a class="w-full bg-surface-card border border-border-subtle hover:border-primary text-text-primary py-2 px-3 rounded-lg text-label-md font-label-md font-bold flex items-center justify-center gap-2 transition-all" href="#instagram" onclick="alert('Instagram profili yeni sekmede açılıyor: @selin.arch'); return false;">
+<span class="material-symbols-outlined text-[18px] text-secondary">open_in_new</span>
+                    Instagram'da DM Başlat
+                  </a>
+</div>
+<!-- Official Campus EDU Email Card -->
+<div class="rounded-xl border border-border-subtle p-3.5 bg-surface-container hover:bg-surface-container-high transition-colors space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div>
+<div class="text-label-lg font-label-lg font-bold text-text-primary">Öğrenci Kampüs E-Postası</div>
+<div class="text-body-sm font-body-sm text-text-secondary font-mono">s****@itu.edu.tr</div>
+</div>
+</div>
+<span class="text-label-sm font-label-sm bg-tertiary-container/30 border border-tertiary/40 text-tertiary font-bold px-2 py-0.5 rounded-full">
+                      Doğrulandı
+                    </span>
+</div>
+<button class="w-full bg-surface-card border border-border-subtle hover:border-primary text-text-primary py-2 px-3 rounded-lg text-label-md font-label-md font-bold flex items-center justify-center gap-2 transition-all" onclick="navigator.clipboard?.writeText('selin.yildiz@itu.edu.tr'); alert('Öğrenci e-postası panoya kopyalandı!');">
+<span class="material-symbols-outlined text-[18px] text-primary">content_copy</span>
+                    E-Postayı Kopyala / Mail Gönder
+                  </button>
+</div>
+<!-- Safe Student Internal Chat -->
+<div class="rounded-xl border border-border-subtle p-3.5 bg-surface-container space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-full bg-secondary-container text-white flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</div>
+<div>
+<div class="text-label-lg font-label-lg font-bold text-text-primary">Takasla Güvenli Sohbet</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Telefon numaranı paylaşmadan konuş</div>
+</div>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary hover:bg-primary-container font-bold py-2.5 px-3 rounded-lg text-label-md font-label-md flex items-center justify-center gap-2 shadow-md transition-all" onclick="alert('Takasla Güvenli Kampüs Sohbeti açılıyor...');">
+<span class="material-symbols-outlined text-[18px]">forum</span>
+                    Uygulama İçi Sohbeti Başlat
+                  </button>
+</div>
+</div>
+</div>
+<!-- Micro-UX Trust Callout Card -->
+<div class="rounded-xl bg-surface-card border border-border-subtle p-3.5 flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0 mt-0.5">verified_user</span>
+<div class="space-y-0.5">
+<div class="text-label-md font-label-md font-bold text-text-primary">Takasla Kampüs Güvencesi</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant leading-snug">
+                  Bu ilandaki öğrenci, geçerli İTÜ e-posta adresiyle doğrulanmıştır. Her iki taraf da kampüste buluşana dek eşyayı devretmeyiniz.
+                </p>
+</div>
+</div>
+</div>
+</div>
+<!-- ==================== MICRO-UX FOOTER / SAFETY GUIDELINES BANNER ==================== -->
+<div class="rounded-xl border border-secondary-container/40 bg-want-container/70 p-4 flex flex-col sm:flex-row items-center justify-between gap-3 text-secondary">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-white flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">gavel</span>
+</div>
+<div>
+<span class="font-bold text-body-md font-body-md block sm:inline text-text-primary">Güvenli Takas Kuralı:</span>
+<span class="text-body-sm font-body-sm text-text-secondary">
+                Kampüs dışında ve ıssız yerlerde buluşmayın. Kütüphane, kantin gibi kamusal alanları tercih edin. <strong>Nakit para veya kapora ödemesi yapmayın.</strong>
+</span>
+</div>
+</div>
+<a class="shrink-0 text-label-sm font-label-sm font-bold text-secondary hover:text-accent-orange-bright hover:underline flex items-center gap-1 transition-colors" href="#">
+            Rehberi Oku
+            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Modal Bottom Actions Bar (Mobile Quick Bar) -->
+<div class="px-space-md py-3 border-t border-border-subtle bg-surface-container-low flex items-center justify-between lg:hidden sticky bottom-0 z-20">
+<div>
+<div class="text-label-sm font-label-sm text-text-muted">İlan Sahibi</div>
+<div class="text-title-md font-title-md font-bold text-text-primary">Selin Y. (4.9 ★)</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-2 rounded-lg bg-surface-container-high border border-border-subtle text-text-primary font-label-md text-label-md font-bold" onclick="switchTab('contact')">
+            İletişim
+          </button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold shadow-sm" onclick="switchTab('offer')">
+            Teklif Yap
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Inline Tab Switching Vanilla Script -->
+<script>
+    function switchTab(tabName) {
+      const offerPane = document.getElementById('pane-offer');
+      const contactPane = document.getElementById('pane-contact');
+      const offerBtn = document.getElementById('tab-offer-btn');
+      const contactBtn = document.getElementById('tab-contact-btn');
+
+      if (!offerPane || !contactPane || !offerBtn || !contactBtn) return;
+
+      if (tabName === 'offer') {
+        offerPane.classList.remove('hidden');
+        offerPane.classList.add('block');
+        contactPane.classList.add('hidden');
+        contactPane.classList.remove('block');
+
+        // Style updates
+        offerBtn.className = "flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all bg-surface-card text-primary font-bold shadow-sm border border-border-subtle";
+        contactBtn.className = "flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-text-primary font-semibold";
+      } else {
+        contactPane.classList.remove('hidden');
+        contactPane.classList.add('block');
+        offerPane.classList.add('hidden');
+        offerPane.classList.remove('block');
+
+        // Style updates
+        contactBtn.className = "flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all bg-surface-card text-primary font-bold shadow-sm border border-border-subtle";
+        offerBtn.className = "flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg font-label-lg text-label-lg transition-all text-on-surface-variant hover:text-text-primary font-semibold";
+      }
+    }
+  </script>
+</body></html>

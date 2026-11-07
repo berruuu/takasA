@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Takasla - iPad 9. Nesil İlan Detayı &amp; Hızlı İletişim</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Plus Jakarta Sans Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-low": "#f2f3ff",
+            "primary-fixed-dim": "#6bd8cb",
+            "secondary-container": "#fd761a",
+            "surface": "#faf8ff",
+            "on-secondary-fixed-variant": "#783200",
+            "error": "#ba1a1a",
+            "on-primary-fixed": "#00201d",
+            "primary-container": "#008378",
+            "inverse-primary": "#6bd8cb",
+            "surface-dim": "#d2d9f4",
+            "on-primary-fixed-variant": "#005049",
+            "surface-container-high": "#e2e7ff",
+            "on-surface": "#131b2e",
+            "outline-variant": "#bcc9c6",
+            "secondary": "#9d4300",
+            "outline": "#6d7a77",
+            "on-primary": "#ffffff",
+            "on-secondary-fixed": "#341100",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "on-tertiary-container": "#f5fff6",
+            "background": "#faf8ff",
+            "surface-container-highest": "#dae2fd",
+            "surface-tint": "#006a61",
+            "error-container": "#ffdad6",
+            "on-secondary": "#ffffff",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed": "#002113",
+            "surface-variant": "#dae2fd",
+            "on-primary-container": "#f4fffc",
+            "surface-bright": "#faf8ff",
+            "inverse-on-surface": "#eef0ff",
+            "on-surface-variant": "#3d4947",
+            "surface-container": "#eaedff",
+            "inverse-surface": "#283044",
+            "tertiary": "#006947",
+            "on-secondary-container": "#5c2400",
+            "tertiary-container": "#00855b",
+            "on-tertiary": "#ffffff",
+            "primary": "#00685f",
+            "on-tertiary-fixed-variant": "#005236",
+            "secondary-fixed": "#ffdbca",
+            "primary-fixed": "#89f5e7",
+            "tertiary-fixed": "#6ffbbe",
+            "tertiary-fixed-dim": "#4edea3",
+            "secondary-fixed-dim": "#ffb690",
+            "on-background": "#131b2e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "margin": "2rem",
+            "gutter": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem",
+            "margin-mobile": "1rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Plus Jakarta Sans"],
+            "body-md": ["Plus Jakarta Sans"],
+            "headline-lg": ["Plus Jakarta Sans"],
+            "display-hero": ["Plus Jakarta Sans"],
+            "body-lg": ["Plus Jakarta Sans"],
+            "label-lg": ["Plus Jakarta Sans"],
+            "headline-lg-mobile": ["Plus Jakarta Sans"],
+            "title-md": ["Plus Jakarta Sans"],
+            "label-md": ["Plus Jakarta Sans"],
+            "label-sm": ["Plus Jakarta Sans"],
+            "title-lg": ["Plus Jakarta Sans"],
+            "headline-md": ["Plus Jakarta Sans"],
+            "headline-sm": ["Plus Jakarta Sans"],
+            "display-hero-mobile": ["Plus Jakarta Sans"]
+          },
+          "fontSize": {
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.03em", "fontWeight": "700" }],
+            "title-lg": ["18px", { "lineHeight": "26px", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .material-symbols-outlined[data-weight="fill"],
+    .icon-filled {
+      font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Hide scrollbars for clean campus app feed */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface antialiased flex justify-center min-h-screen">
+<!-- Mobile Container (Optimized for 390px-430px modern screens) -->
+<div class="w-full max-w-md bg-background min-h-screen flex flex-col relative pb-28 shadow-xl">
+<!-- 1. TOP APP BAR (TASK/DETAIL VIEW: SUPPRESSES GLOBAL BOTTOM NAV) -->
+<header class="sticky top-0 z-40 bg-surface/90 backdrop-blur-md px-margin-mobile py-space-sm flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<!-- Back Navigation Button -->
+<button aria-label="Geri Dön" class="w-10 h-10 rounded-full flex items-center justify-center bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-all active:scale-95 shadow-sm" onclick="window.history.back()">
+<span class="material-symbols-outlined text-primary text-xl">arrow_back</span>
+</button>
+<!-- Context Badges -->
+<div class="flex items-center gap-1.5 bg-primary/10 text-primary px-2.5 py-1 rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Aktif Takas İlanı</span>
+</div>
+<!-- Action cluster -->
+<div class="flex items-center gap-1">
+<button aria-label="Paylaş" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" id="shareBtn">
+<span class="material-symbols-outlined text-xl">share</span>
+</button>
+<button aria-label="Kaydet" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95" id="bookmarkBtn" onclick="toggleBookmark(this)">
+<span class="material-symbols-outlined text-xl">bookmark_border</span>
+</button>
+<button aria-label="Daha Fazla Seçenek" class="w-9 h-9 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high transition-all active:scale-95">
+<span class="material-symbols-outlined text-xl">more_vert</span>
+</button>
+</div>
+</div>
+<!-- Micro Location & Timestamp Bar -->
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md px-0.5 pt-0.5">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<span>İTÜ Ayazağa Kampüsü</span>
+</div>
+<div class="flex items-center gap-1 text-outline">
+<span class="material-symbols-outlined text-xs">schedule</span>
+<span>2 saat önce güncellendi</span>
+</div>
+</div>
+</header>
+<!-- MAIN SCROLLABLE CONTENT -->
+<main class="flex-1 px-margin-mobile pt-space-sm space-y-space-md">
+<!-- 2. IMAGE GALLERY & HERO CAROUSEL -->
+<section class="space-y-space-sm">
+<!-- Main Image Card -->
+<div class="relative w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container-low shadow-sm border border-outline-variant/30 group">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="A clean modern overhead view of an Apple iPad 9th generation in space grey resting on a minimalist wooden campus study desk with an Apple Pencil beside lecture notes and architecture sketches. The aesthetic is bright Scandinavian student minimalist with soft diffuse natural sunlight, cool teal and warm amber notebook accents." id="mainGalleryImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7vUzhOSm1jodmo0cTSykf78K-nDfhXScxSDI1twCy534xLVaZZWeubnCmVqWJD1yELC5X1sX5MNwMtAmb2ikLb_uWVU2NZZriObPL3m3M12dIoOr5I-2GfLuSxgefgzR5dvCVy5hOQ_74EWKIyr4IbZgwVxOLo3W5UB7j67icnB1lhbU-bmKZplL7GHjWYTBlcRHfN4tWPBmIMgIvJU0s1dVUkaUnwWgMLt_0MZ0"/>
+<!-- Top Floating Overlays -->
+<div class="absolute top-2.5 left-2.5 flex items-center gap-1.5 bg-primary-container text-on-primary-container px-2.5 py-1 rounded-full shadow-md backdrop-blur-md">
+<span class="material-symbols-outlined text-xs icon-filled">verified</span>
+<span class="font-label-sm text-label-sm">Doğrulanmış Öğrenci Görseli</span>
+</div>
+<!-- Counter indicator -->
+<div class="absolute top-2.5 right-2.5 bg-inverse-surface/80 text-inverse-on-surface px-2 py-0.5 rounded-full font-label-sm text-label-sm backdrop-blur-sm">
+<span id="carouselCounter">1</span> / 4
+          </div>
+<!-- Quick condition pill inside visual -->
+<div class="absolute bottom-2.5 left-2.5 bg-surface-container-lowest/90 backdrop-blur-sm px-2.5 py-1 rounded-lg border border-outline-variant/40 flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-primary text-sm icon-filled">check_circle</span>
+<span class="font-label-md text-label-md">Batarya %96 • Çiziksiz</span>
+</div>
+</div>
+<!-- Thumbnails row -->
+<div class="flex gap-2 items-center overflow-x-auto no-scrollbar pb-1">
+<button class="thumb-btn flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 border-primary ring-2 ring-primary/20 shadow-sm relative" onclick="setThumb(0)">
+<img class="w-full h-full object-cover" data-alt="Close up photography of the Apple iPad 9th generation screen showing crisp display and immaculate glass condition on a bright university library study table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARan3L3P2nh8ZkTw17tN6o06TX4K7tB7UdyVvL_IZRNkmCHsl-j2BCr1iKN3g7ZiqNuePrgNqhnDTnMo9feyvjKeALmI0oFHdb9rWSeYBYgCP2MQKULGw4oCHKD6qsaYN8fadZV234VK4mN8y6lTS_zmjvm2a8J85xpximTlb0xzl-YORB2Ui08cH1bBbVSzQ_esd6fvxCzQTEsGeTuTgfIDDs8Bq5l9KcdzlqFSY"/>
+</button>
+<button class="thumb-btn flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border border-outline-variant/60 hover:border-primary transition-all" onclick="setThumb(1)">
+<img class="w-full h-full object-cover" data-alt="Apple Pencil 1st generation resting on its original clean white retail packaging box alongside genuine charging adapter on a wooden desk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPzIctf8jp3yr-ETZwuNCehJFN19sOnpus5g3vujxfu_09XlkFczqszvQHz3V0e8xCLvffj1hfXB2faxHVT9bBGsQG3Tb3zCuihrgmPHY0zJ4j_l9Ju3OEmg_-cd1OTyrq9cseFEdHo23YRERe40sqXYkTXL9OqegZXtCpq1lcKCDIKDGv4wz3HP3FvFbA5pBihEglVLR2pCnxw1b_TvPwGTvBWYppXnpIsgm-jgE"/>
+</button>
+<button class="thumb-btn flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border border-outline-variant/60 hover:border-primary transition-all" onclick="setThumb(2)">
+<img class="w-full h-full object-cover" data-alt="Rear aluminum chassis of the space gray iPad 9 showing pristine unblemished back casing with camera lens in sharp university dorm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUaecGMEfA1JcBSQpSgXTBQhX39rYW0Gsft2nBB2CM2nOjZcOKpnN09-H20XKNn4TkLcjQ2E_DwWea8NvH8hhomy8ZLcqwOm0cTm6CWFG4cGUSRhq4TWtLXKIxJ4JuRDVBDTn-vQDn1EjpYkhAK8lGIA9SyW5TqCIJ-36hw-gXlaXKouQpngCJD6Ng1Kf33v17VQv11uTmI7BxLxsyIVwoeggFgthCpiFpgF-U-XY"/>
+</button>
+<button class="flex-shrink-0 w-16 h-16 rounded-lg bg-surface-container-high border border-outline-variant/60 flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-sm">photo_library</span>
+<span class="font-label-sm text-label-sm mt-0.5">+1 Foto</span>
+</button>
+</div>
+<!-- Listing Core Metadata & Tags -->
+<div class="pt-1 space-y-2">
+<!-- Badges Cluster -->
+<div class="flex flex-wrap items-center gap-1.5">
+<span class="bg-primary text-on-primary font-label-sm text-label-sm px-2.5 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs">arrow_upward</span> VERİLEN
+            </span>
+<span class="bg-surface-container-high text-on-surface font-label-md text-label-md px-2 py-0.5 rounded-full">
+              Sıfır Ayarında
+            </span>
+<span class="bg-surface-container-high text-on-surface font-label-md text-label-md px-2 py-0.5 rounded-full">
+              Garantili / Kutulu
+            </span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">bolt</span> Hızlı Takas
+            </span>
+</div>
+<!-- Product Title -->
+<h1 class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-snug">
+            iPad 9. Nesil (64 GB, Uzay Grisi) + Apple Pencil 1
+          </h1>
+<!-- Faculty / Exact Location detail -->
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md">
+<span class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-base">domain</span>
+<span>Mimarlık Fakültesi (Taşkışla / Ayazağa)</span>
+</span>
+<span class="text-outline-variant">•</span>
+<span class="text-outline">Yüz Yüze Teslim</span>
+</div>
+</div>
+</section>
+<!-- 3. THE "WANT" (ARANAN) CONTRAST CARD -->
+<section class="rounded-xl border border-secondary/20 bg-secondary-fixed/40 p-space-md relative overflow-hidden shadow-sm">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-secondary-container/10 pointer-events-none"></div>
+<div class="flex items-start justify-between gap-2 mb-2">
+<div class="flex items-center gap-2">
+<span class="w-7 h-7 rounded-lg bg-secondary-container text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-lg icon-filled">swap_horiz</span>
+</span>
+<div>
+<span class="font-label-sm text-label-sm text-secondary tracking-wider uppercase block">ARANAN TAKAS TERCİHİ</span>
+<span class="font-label-md text-label-md text-on-secondary-fixed-variant">Karşılığında Kabul Edilenler</span>
+</div>
+</div>
+<span class="bg-secondary-container text-on-primary font-label-sm text-label-sm px-2 py-0.5 rounded-full shadow-sm">
+            ARANAN
+          </span>
+</div>
+<p class="font-title-md text-title-md text-on-surface font-semibold mt-1">
+          Mekanik Klavye (Brown/Red Switch) + 27 inç IPS Monitör veya Dengi Elektronik
+        </p>
+<!-- Fast Filter tags -->
+<div class="flex flex-wrap gap-1.5 mt-3">
+<span class="bg-surface-container-lowest text-secondary font-label-md text-label-md px-2.5 py-1 rounded-md border border-secondary/20 flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-xs">desktop_windows</span> 27" Monitör
+          </span>
+<span class="bg-surface-container-lowest text-secondary font-label-md text-label-md px-2.5 py-1 rounded-md border border-secondary/20 flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-xs">keyboard</span> Red Switch Klavye
+          </span>
+<span class="bg-surface-container-lowest text-secondary font-label-md text-label-md px-2.5 py-1 rounded-md border border-secondary/20 flex items-center gap-1 shadow-xs">
+<span class="material-symbols-outlined text-xs">draw</span> Çizim Tableti
+          </span>
+</div>
+<!-- Price compensation note -->
+<div class="mt-3 pt-2.5 border-t border-secondary/20 flex items-center gap-2 text-on-secondary-fixed-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-sm">payments</span>
+<span>Nakit fark kabul edilebilir (+500 TL civarı dengeleme yapılabilir).</span>
+</div>
+</section>
+<!-- 4. STUDENT VERIFICATION CARD (GÜVEN KÜNYESİ) -->
+<section class="rounded-xl border border-outline-variant/40 bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center gap-3">
+<!-- Avatar with Online badge -->
+<div class="relative">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary/20 shadow-inner">
+<img class="w-full h-full object-cover" data-alt="Warm natural portrait of a young female university architecture student with friendly smile, casual sweater, holding design notebook against airy campus library setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYuJjbZbYGZceGTspoyzsOtwaNgJH9yKT2PvYzba1wqYOuzYgzWhov9IE_hEAC6qLGteoTZCdbeRQ-CSb3o7IHOAO3nNYWdwCkT1GeltIjOhN566FC9Z9bXDr7zpZ8URWbSJ22TTrzpJgaFv8KAO5Ez7DIZfL5ryDLtslO_NoBAJRKEifwTt0UNWUdG24aM95MmFLy6cicBg8vGSnezw8U-ExvaqB42jkwDmmUSjo"/>
+</div>
+<span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-tertiary-container border-2 border-surface-container-lowest" title="Aktif Öğrenci"></span>
+</div>
+<!-- Bio & Verified Credential -->
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1.5">
+<h2 class="font-title-md text-title-md text-on-surface truncate">Selin Y.</h2>
+<span class="bg-tertiary/10 text-tertiary font-label-sm text-label-sm px-1.5 py-0.5 rounded flex items-center gap-0.5 flex-shrink-0" title="Doğrulanmış Öğrenci">
+<span class="material-symbols-outlined text-xs icon-filled">verified_user</span>
+<span>.edu.tr</span>
+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+              Mimarlık 3. Sınıf • İTÜ Ayazağa
+            </p>
+<div class="flex items-center gap-2 mt-1 font-label-sm text-label-sm">
+<span class="text-secondary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-sm icon-filled">star</span> 4.9
+              </span>
+<span class="text-outline">•</span>
+<span class="text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">handshake</span> 18 Başarılı Takas
+              </span>
+</div>
+</div>
+</div>
+<!-- Response Time Metric -->
+<div class="mt-3 pt-2.5 border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+            Genelde 15 dk içinde yanıt verir
+          </span>
+<span class="text-primary font-semibold">Aktif Üye</span>
+</div>
+</section>
+<!-- 5. FAST CONTACT ACTIONS SECTION -->
+<section class="space-y-space-sm">
+<!-- Segmented Tab switcher -->
+<div class="flex p-1 bg-surface-container rounded-xl">
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md font-semibold text-center transition-all bg-surface-container-lowest text-primary shadow-xs" id="tabContact" onclick="switchContactTab('contact')">
+            Hızlı İletişim (Aktif)
+          </button>
+<button class="flex-1 py-2 rounded-lg font-label-md text-label-md font-semibold text-center transition-all text-on-surface-variant hover:text-on-surface" id="tabOffer" onclick="switchContactTab('offer')">
+            Takas Teklifi Yap
+          </button>
+</div>
+<!-- TAB 1: Fast Contact Methods -->
+<div class="space-y-space-sm" id="contactContent">
+<!-- Instagram Direct Box -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-500 via-rose-500 to-purple-600 flex items-center justify-center text-white shadow-sm">
+<span class="material-symbols-outlined text-xl">alternate_email</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-semibold">@selin.arch</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-1.5 py-0.5 rounded-full">
+                      En Hızlı Yanıt
+                    </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instagram Direct Mesaj</span>
+</div>
+</div>
+</div>
+<!-- Action buttons -->
+<div class="grid grid-cols-2 gap-2">
+<a class="py-2.5 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-variant active:scale-95 transition-all text-center" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-base">open_in_new</span>
+<span>Profili Aç</span>
+</a>
+<button class="py-2.5 px-3 rounded-lg bg-primary/10 text-primary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-primary/20 active:scale-95 transition-all" onclick="copyToClipboard('@selin.arch', 'Instagram kullanıcı adı kopyalandı!')">
+<span class="material-symbols-outlined text-base">content_copy</span>
+<span>Kullanıcı Adı</span>
+</button>
+</div>
+</div>
+<!-- Campus Edu Email Box -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-xl">school</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-title-md text-title-md text-on-surface font-semibold">selin.y*****@itu.edu.tr</span>
+</div>
+<span class="font-body-sm text-body-sm text-tertiary font-medium">Doğrulanmış Öğrenci Postası</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<a class="py-2.5 px-3 rounded-lg bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-variant active:scale-95 transition-all text-center" href="mailto:selin.y@itu.edu.tr?subject=Takasla%20-%20iPad%209.%20Nesil%20Hakkında">
+<span class="material-symbols-outlined text-base">mail</span>
+<span>E-Posta Gönder</span>
+</a>
+<button class="py-2.5 px-3 rounded-lg bg-primary/10 text-primary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-primary/20 active:scale-95 transition-all" onclick="copyToClipboard('selin.y@itu.edu.tr', 'E-posta adresi kopyalandı!')">
+<span class="material-symbols-outlined text-base">content_copy</span>
+<span>Adresi Kopyala</span>
+</button>
+</div>
+</div>
+<!-- Fast Message Preset Draft (Hazır Mesaj Taslağı) -->
+<div class="p-space-md rounded-xl bg-surface-container-low border border-outline-variant/40 space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">edit_note</span> Hızlı İletişim Taslağı
+              </span>
+<span class="font-label-sm text-label-sm text-outline">Tek tıkla kopyala</span>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-lowest border border-outline-variant/30 text-on-surface font-body-sm text-body-sm italic">
+              "Merhaba Selin! Takasla'da gördüğüm iPad 9. Nesil ilanın için yazıyorum. Aradığın mekanik klavye / monitör için görüşebilir miyiz?"
+            </div>
+<button class="w-full py-2 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md border border-primary/20 hover:bg-primary/5 active:scale-98 transition-all flex items-center justify-center gap-1.5" onclick="copyToClipboard('Merhaba Selin! Takasla\'da gördüğüm iPad 9. Nesil ilanın için yazıyorum. Aradığın mekanik klavye / monitör için görüşebilir miyiz?', 'Hazır mesaj metni kopyalandı!')">
+<span class="material-symbols-outlined text-sm">content_copy</span>
+<span>Taslağı Kopyala &amp; DM At</span>
+</button>
+</div>
+</div>
+<!-- TAB 2: Offer Proposal Form (Toggled via JS) -->
+<div class="hidden space-y-3 p-space-md rounded-xl bg-surface-container-lowest border border-outline-variant/40 shadow-sm" id="offerContent">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-lg">local_offer</span>
+<span class="font-title-md text-title-md font-semibold">Takas Teklifini Yapılandır</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Selin'in aradığı ürünlerden sende olanı seç veya teklif edeceğin eşyayı yaz:
+          </p>
+<div class="space-y-2">
+<label class="block font-label-sm text-label-sm text-on-surface">Teklif Edeceğin Ürün</label>
+<input class="w-full rounded-lg bg-surface-container-low border border-outline-variant/50 px-3 py-2 text-on-surface font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none" placeholder="Örn: Keychron K2 Red Switch + 500 TL" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="block font-label-sm text-label-sm text-on-surface">Buluşma Noktası Tercihi</label>
+<select class="w-full rounded-lg bg-surface-container-low border border-outline-variant/50 px-3 py-2 text-on-surface font-body-md text-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none">
+<option>İTÜ Ayazağa - Mustafa İnan Kütüphanesi</option>
+<option>İTÜ Taşkışla - Orta Avlu</option>
+<option>İTÜ 75. Yıl Öğrenci Merkezi</option>
+</select>
+</div>
+<button class="w-full py-2.5 rounded-lg bg-secondary-container text-on-primary font-label-md text-label-md font-bold shadow-md hover:opacity-95 active:scale-98 transition-all flex items-center justify-center gap-1.5" onclick="showToast('Teklif taslağı oluşturuldu ve DM paneline aktarıldı!')">
+<span class="material-symbols-outlined text-base">send</span>
+<span>Teklifi Selin'e İlet</span>
+</button>
+</div>
+</section>
+<!-- 6. SAFE CAMPUS BARTER ACCORDION / TIPS CARD -->
+<section class="rounded-xl border border-tertiary/20 bg-on-tertiary-container/80 p-space-md space-y-2 shadow-xs">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-lg icon-filled">shield</span>
+<h3 class="font-title-md text-title-md font-bold">Güvenli Kampüs Barter İpuçları</h3>
+</div>
+<ul class="space-y-2 text-on-surface-variant font-body-sm text-body-sm pt-1">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5">location_city</span>
+<span>Buluşmalar için <strong>İTÜ Mustafa İnan Kütüphanesi</strong> veya <strong>75. Yıl Yemekhanesi</strong> gibi aydınlık, kalabalık ortak alanları tercih edin.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5">verified</span>
+<span>Elektronik ürünleri takas etmeden önce iCloud oturumu ve seri numarasını birlikte kontrol edin.</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-primary text-base flex-shrink-0 mt-0.5">handshake</span>
+<span>Takas tamamlandığında platform üzerinden <strong>"Takas Başarılı"</strong> onayı vererek karma puanı kazanın.</span>
+</li>
+</ul>
+</section>
+<!-- Safety Disclaimer -->
+<div class="text-center pb-2">
+<p class="font-label-sm text-label-sm text-outline">
+          Takasla • Üniversite İçi Doğrulanmış Öğrenci Ağı
+        </p>
+</div>
+</main>
+<!-- 7. FIXED BOTTOM STICKY ACTION BAR -->
+<div class="fixed bottom-0 left-0 right-0 z-50 flex justify-center pointer-events-none">
+<div class="w-full max-w-md bg-surface-container-lowest/95 backdrop-blur-lg px-margin-mobile py-space-sm shadow-[0_-4px_16px_rgba(0,0,0,0.06)] flex items-center gap-3 pointer-events-auto border-t border-outline-variant/30">
+<!-- Left Quick Message Action Button -->
+<button class="w-12 h-12 rounded-xl bg-surface-container-high text-on-surface flex items-center justify-center hover:bg-surface-variant active:scale-95 transition-all shadow-xs flex-shrink-0" onclick="openInstagramDM()" title="Instagram DM Başlat">
+<span class="material-symbols-outlined text-2xl text-primary">chat</span>
+</button>
+<!-- Primary Swap Call to Action Button -->
+<button class="flex-1 h-12 rounded-xl bg-primary text-on-primary font-title-md text-title-md font-bold shadow-md hover:bg-primary-container active:scale-98 transition-all flex items-center justify-center gap-2" id="mainActionCta" onclick="handleMainCta()">
+<span class="material-symbols-outlined text-xl">swap_calls</span>
+<span id="mainCtaText">Instagram'dan Hemen Yaz</span>
+</button>
+</div>
+</div>
+<!-- Notification Toast Popup -->
+<div class="fixed top-16 left-1/2 -translate-x-1/2 z-50 px-4 py-2 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-xl flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300 transform -translate-y-2" id="toast">
+<span class="material-symbols-outlined text-inverse-primary text-sm icon-filled">check_circle</span>
+<span id="toastMsg">Bildirim mesajı</span>
+</div>
+</div>
+<!-- Micro Interaction Scripts -->
+<script>
+    // Tab Switching
+    function switchContactTab(type) {
+      const contactTab = document.getElementById('tabContact');
+      const offerTab = document.getElementById('tabOffer');
+      const contactContent = document.getElementById('contactContent');
+      const offerContent = document.getElementById('offerContent');
+      const ctaText = document.getElementById('mainCtaText');
+
+      if (type === 'contact') {
+        contactTab.className = "flex-1 py-2 rounded-lg font-label-md text-label-md font-semibold text-center transition-all bg-surface-container-lowest text-primary shadow-xs";
+        offerTab.className = "flex-1 py-2 rounded-lg font-label-md text-label-md font-semibold text-center transition-all text-on-surface-variant hover:text-on-surface";
+        contactContent.classList.remove('hidden');
+        offerContent.classList.add('hidden');
+        ctaText.textContent = "Instagram'dan Hemen Yaz";
+      } else {
+        offerTab.className = "flex-1 py-2 rounded-lg font-label-md text-label-md font-semibold text-center transition-all bg-surface-container-lowest text-primary shadow-xs";
+        contactTab.className = "flex-1 py-2 rounded-lg font-label-md text-label-md font-semibold text-center transition-all text-on-surface-variant hover:text-on-surface";
+        offerContent.classList.remove('hidden');
+        contactContent.classList.add('hidden');
+        ctaText.textContent = "Takas Teklifini Tamamla";
+      }
+    }
+
+    // Bookmark Toggle
+    function toggleBookmark(btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isSaved = icon.textContent === 'bookmark';
+      if (isSaved) {
+        icon.textContent = 'bookmark_border';
+        icon.classList.remove('text-primary', 'icon-filled');
+        showToast('İlan kaydedilenlerden çıkarıldı');
+      } else {
+        icon.textContent = 'bookmark';
+        icon.classList.add('text-primary', 'icon-filled');
+        showToast('İlan favorilerinize kaydedildi');
+      }
+    }
+
+    // Clipboard Copy Helper
+    function copyToClipboard(text, message) {
+      navigator.clipboard.writeText(text).then(() => {
+        showToast(message || 'Panoya kopyalandı!');
+      }).catch(() => {
+        showToast('Kopyalandı: ' + text);
+      });
+    }
+
+    // Instagram Deep Link Simulation
+    function openInstagramDM() {
+      showToast('Instagram DM açılıyor: @selin.arch');
+      setTimeout(() => {
+        window.open('https://instagram.com', '_blank');
+      }, 600);
+    }
+
+    // Main Bottom Action
+    function handleMainCta() {
+      const isOfferActive = !document.getElementById('offerContent').classList.contains('hidden');
+      if (isOfferActive) {
+        showToast('Takas teklifiniz Selin\'e iletildi!');
+      } else {
+        copyToClipboard('Merhaba Selin! Takasla\'daki iPad 9 ilanınız için yazıyorum.', 'Mesaj taslağı kopyalandı, Instagram açılıyor...');
+        setTimeout(() => {
+          window.open('https://instagram.com', '_blank');
+        }, 700);
+      }
+    }
+
+    // Toast Banner Notification
+    let toastTimeout;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toastMsg');
+      toastMsg.textContent = msg;
+      
+      clearTimeout(toastTimeout);
+      toast.classList.remove('opacity-0', '-translate-y-2', 'pointer-events-none');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', '-translate-y-2', 'pointer-events-none');
+      }, 2500);
+    }
+
+    // Thumbnail Switcher Indicator
+    function setThumb(index) {
+      const counter = document.getElementById('carouselCounter');
+      counter.textContent = index + 1;
+      
+      const buttons = document.querySelectorAll('.thumb-btn');
+      buttons.forEach((btn, i) => {
+        if (i === index) {
+          btn.className = 'thumb-btn flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 border-primary ring-2 ring-primary/20 shadow-sm relative';
+        } else {
+          btn.className = 'thumb-btn flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border border-outline-variant/60 hover:border-primary transition-all';
+        }
+      });
+      showToast(`${index + 1}. Görsel Görüntüleniyor`);
+    }
+
+    // Web Share API trigger
+    document.getElementById('shareBtn').addEventListener('click', async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: 'Takasla - iPad 9. Nesil',
+            text: 'İTÜ Ayazağa kampüsünde iPad 9. Nesil takas ilanı!',
+            url: window.location.href,
+          });
+        } catch (err) {}
+      } else {
+        copyToClipboard(window.location.href, 'İlan bağlantısı kopyalandı!');
+      }
+    });
+  </script>
+</body></html>
